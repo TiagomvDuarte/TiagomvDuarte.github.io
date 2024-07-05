@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Hi! I'm Tiago and I'm taking a BsC in Computer Science and Engineering at NOVA SST in Lisbon, Portugal. I'm a tech and world affairs enthusiast, always eager to learn and dive into new worlds. This is my website!">
+  <meta name="author" content="Tiago Duarte">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TD | Tiago Duarte</title>
+  <meta property="og:title" content="TD | Tiago Duarte">
+  <meta property="og:description"
+    content="Hi! I'm Tiago and I'm taking a BsC in Computer Science and Engineering at NOVA SST in Lisbon, Portugal. I'm a tech and world affairs enthusiast, always eager to learn and dive into new worlds. This is my website!">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="/Photos/Icon.png" type="x-icon">
+
+</head>
+
+<body>
+
+  <nav id="navBar">
+
+    <div class="logo">
+      <a href="myWebsite.html">
+        <img src="Photos/WebsiteLogo.png" alt="WebsiteLogo">
+      </a>
+    </div>
+
+    <ul class="sideBar">
+
+      <li onclick="hideSideBar()"><a href="#" onclick="event.preventDefault();">
+          <span>X</span>
+        </a></li>
+      <li onclick="hideSideBar()"><a href="#aboutMe">About</a></li>
+      <li onclick="hideSideBar()"><a href="#education">Education</a></li>
+      <li onclick="hideSideBar()"><a href="#skills">Skills</a></li>
+      <li onclick="hideSideBar()"><a href="#interests">Interests</a></li>
+      <li onclick="hideSideBar()"><a href="#contacts">Contacts</a></li>
+
+    </ul>
+
+    <ul class="items">
+
+      <li class="hideOnMobile"><a href="#aboutMe">About</a></li>
+      <li class="hideOnMobile"><a href="#education">Education</a></li>
+      <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+      <li class="hideOnMobile"><a href="#interests">Interests</a></li>
+      <li class="hideOnMobile"><a href="#contacts">Contacts</a></li>
+
+      <div class="Menu">
+        <li onclick="showSideBar()"><a href="#" onclick="event.preventDefault();">&#9776; Menu</a></li>
+      </div>
+
+    </ul>
+
+  </nav>
+
+  <main id="display">
+
+    <div class="content">
+
+      <div class="titleDisplay">
+        <h1> WELCOME TO MY PERSONAL WEBSITE!</h1>
+      </div>
+
+      <div class="sub-titleDisplay">
+        <h1> I'm a Computer Sciente student and a tech enthusiast</h1>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <div id="container">
+    <section id="aboutMe">
+
+      <header class="title">
+        <h1><span>About Me</span></h1>
+      </header>
+
+      <div class="sideBySide">
+        <div class="biography">
+          <p>I am currently 20 years old, pursuing a <b>Bachelor's degree in Computer Science and Engineering at NOVA
+              School of Science and Technology in Lisbon, Portugal</b> and eagerly anticipating the opportunity to
+            pursue a
+            master's degree in Data Science.</p>
+
+          <p>My interests range from technology to global and social affairs, and I am particularly interested in
+            integrating these interests whenever possible. I have a strong passion for learning and continually
+            expanding my knowledge in areas such as<b> Artificial Intelligence</b> and <b>Data Science</b>, exploring
+            their profound
+            impact on the world.</p>
+
+          <p>Driven by a desire to understand the intersection of technology and society, I am committed to exploring
+            how
+            advancements in these fields can positively impact the world around us.</p>
+        </div>
+
+        <div class="Photo">
+          <img src="Photos/BioPhoto.jpg" alt="Biophoto">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="education">
+
+      <header class="title">
+        <h1><span>Education</span></h1>
+      </header>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-box">
+            <div class="timeline-content">
+              <p>September 2022 - Present</p>
+              <h2>BSc in Computer Science and Engineering</h2>
+              <p>Average: 16.5</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-box">
+            <div class="timeline-content">
+              <p>July 2023</p>
+              <h2>Certificate in Advanced English</h2>
+              <p>Overall: 189</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-box">
+            <div class="timeline-content">
+              <p>June 2022</p>
+              <h2>First Certificate in English</h2>
+              <p>Overall: 166</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-box">
+            <div class="timeline-content">
+              <p>September 2019 - June 2022</p>
+              <h2>High School in Science & Technology Course</h2>
+              <p>Average: 17.7
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-box">
+            <div class="timeline-content">
+              <p>September 2017 - July 2023</p>
+              <h2>Cambridge School Classes</h2>
+              <p>4 times/week</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="skills">
+
+      <header class="title">
+        <h1><span>Skills</span></h1>
+      </header>
+
+      <div class="sideBySide">
+
+        <div class="sideImages">
+          <img src="Photos/Java.png" alt="java">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/Ocaml.png" alt="oCaml">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/SQL.png" alt="SQL">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/C.png" alt="C">
+        </div>
+      </div>
+
+      <div class="informativeText">
+        <p>I have also taken courses on basic concepts of:</p>
+      </div>
+
+      <div class="sideBySide">
+
+        <div class="sideImages">
+          <img src="Photos/HTML.png" alt="HTML">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/CSS.png" alt="CSS">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/javaScript.png" alt="JavaScript">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/python.png" alt="Python">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/typeScript.png" alt="TypeScript">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/react.png" alt="React">
+        </div>
+
+
+        <div class="sideImages">
+          <img src="Photos/pyTorch.png" alt="PyTorch">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/tensorFlow.png" alt="TensorFlow">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/pandas.png" alt="Pandas">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/NumPy.png" alt="NymPy">
+        </div>
+
+        <div class="sideImages">
+          <img src="Photos/R.png" alt="R">
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="interests">
+
+      <header class="title">
+        <h1><span>Interests</span></h1>
+      </header>
+
+      <div class="newsPart">
+
+        <header class="interestsTitles">
+          <h1>Articles</h1>
+        </header>
+
+        <div class="articles">
+
+          <div><a href="https://ig.ft.com/generative-ai/" target="'_blank">
+              <div class="news">
+                <img src="Photos/FT.png">
+                <h4> How ChatGPT Works</h4>
+              </div>
+            </a></div>
+
+          <div><a href="https://ig.ft.com/microchips/" target="'_blank">
+              <div class="news">
+                <img src="Photos/FT.png">
+                <h4> How MicroChips Are Made</h4>
+              </div>
+            </a></div>
+
+          <div><a
+              href="https://www.nytimes.com/2024/04/06/technology/tech-giants-harvest-data-artificial-intelligence.html?unlocked_article_code=1.lU0.V44E.-TKTqJCAS6DY&smid=url-share"
+              target="'_blank">
+              <div class="news">
+                <img src="Photos/NYT.png">
+                <h4> How AI Companies Harvest Data</h4>
+              </div>
+            </a></div>
+
+          <div><a href="https://www.nytimes.com/2024/04/06/technology/ai-data-tech-companies.html" target="'_blank">
+              <div class="news">
+                <img src="Photos/NYT.png">
+                <h4> What is Syntetic Data</h4>
+              </div>
+            </a> </div>
+
+          <div><a
+              href="https://www.economist.com/science-and-technology/2024/04/03/the-science-that-built-the-ai-revolution"
+              target="_blank">
+              <div class="news">
+                <img src="Photos/TheEconomist.png">
+                <h4>The Science that Built the AI Revolution</h4>
+              </div>
+            </a></div>
+
+        </div>
+      </div>
+
+      <div class="booksPart">
+
+        <header class="interestsTitles">
+          <h1>Books</h1>
+        </header>
+
+        <div class="digitalBookshelf">
+          <img src="Photos/AI41.webp">
+          <img src="Photos/AlgoritmoMestre.jpeg">
+          <img src="Photos/Bitcoin.jpeg">
+          <img src="Photos/ChipWar.jpg">
+          <img src="Photos/ComingWave.jpg">
+          <img src="Photos/CódigoDaCriatividade.webp">
+          <img src="Photos/MentesDigitais.webp">
+          <img src="Photos/MetaVerso.jpeg">
+          <img src="Photos/SteveJobs.jpeg">
+          <img src="Photos/Superpotências AI.webp">
+          <img src="Photos/SupremaciaQuantica.jpeg">
+          <img src="Photos/InteligênciaArtificial.png">
+        </div>
+
+      </div>
+
+      <div class="newsPart">
+
+        <header class="interestsTitles">
+          <h1>Videos</h1>
+        </header>
+
+        <div class="articles">
+
+          <div><a href="https://introtodeeplearning.com/" target="_blank">
+              <div class="news">
+                <img src="Photos/MIT.png">
+                <h4>MIT- Intro do Deep Learning 2024</h4>
+              </div>
+            </a></div>
+
+          <div><a href="https://youtube.com/playlist?list=PLhQjrBD2T381WAHyx1pq-sBfykqMBI7V4&si=e17UsZZ7FIZTQHdg"
+              target="_blank">
+              <div class="news">
+                <img src="Photos/Harvard.png">
+                <h4>Harvard CS50 2024</h4>
+              </div>
+            </a></div>
+
+          <div><a href="https://youtube.com/playlist?list=PLhQjrBD2T381PopUTYtMSstgk-hsTGkVm" target="_blank">
+              <div class="news">
+                <img src="Photos/Harvard.png">
+                <h4>Harvard CS50- Introduction to Artificial Intelligence 2023</h4>
+              </div>
+            </a></div>
+
+        </div>
+
+      </div>
+
+      <div class="activitiesPart">
+
+        <header class="interestsTitles">
+          <h1>Activities</h1>
+        </header>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <p>May 2024 - Present</p>
+                <h2>Thirst Project Portugal</h2>
+                <p>Member of Logistics Departement- Team FCT NOVA</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <p>March 2024 - Present </p>
+                <h2>Magma Ambassador</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <p>September 2014 - Present</p>
+                <h2>Tennis Classes</h2>
+                <p>Twice a week</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <p>October 2015 - July 2020</p>
+                <h2>Guitar Classes</h2>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="contacts">
+
+      <header class="title">
+        <h1><span>Contacts</span></h1>
+      </header>
+
+      <div class="contactsPhrase">
+        <h2>Fell free to contact me:</h2>
+      </div>
+
+      <div class="sideBySide">
+
+        <div class="sideImages">
+          <a href="https://www.linkedin.com/in/tiago-duarte-628278263/" target="'_blank">
+            <img src="Photos/linkedin.png">
+          </a>
+        </div>
+
+        <div class="sideImages">
+          <a href="https://github.com/TiagomvDuarte" target="'_blank">
+            <img src="Photos/github.png">
+          </a>
+        </div>
+
+        <div class="sideImages">
+          <a href="mailto:tiagomvduarte24@gmail.com" target="'_blank">
+            <img src="Photos/email.png" alt="Contact Us">
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer id="footer">
+
+    <div class="name">
+      <p><b>Made by Tiago Duarte</b></p>
+    </div>
+
+    <div class="copyRight">
+      <p>CopyRight &copy; 2024. All Rights Reserved</p>
+    </div>
+
+  </footer>
+
+
+  <script src="custom.js"></script>
+
+</body>
+
+</html>

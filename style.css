@@ -1,0 +1,401 @@
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #36454F;
+}
+
+#container {
+  margin: 0vh 10vh;
+}
+
+/* It styles the images that are side by side */
+.sideImages img {
+  padding: 1.25vh;
+  width: 30vh;
+  height: auto;
+}
+
+.sideImages img:hover {
+  width: 35vh;
+  height: auto;
+}
+
+
+/* It styles all the sections titles */
+.title {
+  font-size: 6vh;
+  padding-top: 6vh;
+  color: #F5F5DC;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 6vh;
+}
+
+/* It styles the line bellow every title */
+.title h1 span {
+  border-bottom: 1.5vh solid #001F3F;
+}
+
+/* It styles the sections were we have images side by side */
+.sideBySide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAVIGATION BAR*/
+
+#navBar {
+  height: 10vh;
+  padding: 0 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #001F3F;
+  position: fixed;
+  z-index: 2;
+}
+
+#navBar .logo img {
+  height: 5vh;
+  width: auto;
+}
+
+#navBar .items {
+  display: flex;
+  list-style: none;
+  padding: 0 5vh;
+}
+
+#navBar .items .Menu {
+  display: none;
+}
+
+#navBar .items li a {
+  font-size: 3vh;
+  text-decoration: none;
+  color: #F5F5DC;
+  padding: 0vh 4vh;
+  border-radius: 20px;
+}
+
+#navBar .items li a:hover {
+  background-color: #F5F5DC;
+  color: #003D7C;
+  font-weight: bold;
+
+}
+
+#navBar .sideBar {
+  position: fixed;
+  list-style: none;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #001F3F;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#navBar .sideBar li {
+  margin: 2vh 0;
+}
+
+#navBar .sideBar li a {
+  font-size: 19px;
+  text-decoration: none;
+  color: #F5F5DC;
+  padding: 1vh 4vh;
+  border-radius: 20px;
+}
+
+#navBar .sideBar li a:hover {
+  background-color: #F5F5DC;
+  color: #003D7C;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1450px) {
+
+  .hideOnMobile {
+    display: none;
+  }
+
+  #navBar .items .Menu {
+    display: flex;
+  }
+
+}
+
+
+/*DISPLAY*/
+
+#display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('Photos/display.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+#display .content {
+  color: #F5F5DC;
+  text-align: center;
+}
+
+#display .content .titleDisplay {
+  font-size: 4vh;
+
+}
+
+#display .content .sub-titleDisplay {
+  font-size: 2vh;
+}
+
+
+/* ABOUT ME */
+
+#aboutMe .biography {
+  width: 60%;
+  color: #F5F5DC;
+  font-size: 3.5vh;
+  text-align: justify;
+}
+
+#aboutMe .Photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
+
+#aboutMe .Photo img {
+  max-width: 60vh;
+  height: auto;
+  border-radius: 50%;
+  border: 1.2vh solid #001F3F;
+}
+
+
+@media screen and (max-width: 1450px) {
+  #aboutMe .sideBySide {
+    flex-direction: column;
+  }
+
+  #aboutMe .biography {
+    width: 90%;
+
+  }
+
+  #aboutMe .Photo {
+    width: 90%;
+    margin: 2.5vh 0;
+
+  }
+
+  #aboutMe .Photo img {
+    max-width: 50vh;
+  }
+}
+
+
+/* TIMELINES */
+
+.timeline {
+  position: relative;
+  max-width: 100%;
+  align-items: center;
+}
+
+/* It styles the vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 1vh;
+  background-color: #F5F5DC;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.timeline-item {
+  padding: 2.5vh 5vh;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-marker {
+  position: absolute;
+  width: 4vh;
+  height: 4vh;
+  background-color: #001F3F;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+  right: -2.5vh;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+  left: -1.5vh;
+}
+
+.timeline-box {
+  background-color: #001F3F;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.timeline-content {
+  color: #F5F5DC;
+  ;
+}
+
+.timeline-content p {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.timeline-content h2 {
+  font-size: 4vh;
+  text-align: center;
+}
+
+/* SKILLS SECTIONS */
+
+#skills {
+  text-align: center;
+}
+
+.informativeText {
+  color: #F5F5DC;
+  font-size: 3.5vh;
+  padding: 2vh 0;
+
+}
+
+
+/* INTERESTS SECTION */
+#interests {
+  justify-content: center;
+}
+
+#interests .interestsTitles {
+  color: #F5F5DC;
+  font-size: 3.5vh;
+  margin: 3vh 0;
+}
+
+#interests .newsPart .articles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#interests .newsPart .articles>div {
+  width: 50%;
+}
+
+@media screen and (max-width: 850px) {
+  #interests .newsPart .articles>div {
+    width: 100%;
+  }
+}
+
+#interests .newsPart .articles .news {
+  display: flex;
+  align-items: center;
+  color: #F5F5DC;
+  font-size: 3vh;
+}
+
+#interests .newsPart .articles .news img {
+  margin: 0vh 5vh;
+  padding: 1vh;
+  width: 9vh;
+  height: auto;
+  border-radius: 50%;
+}
+
+#interests .booksPart header.titleBookshelf {
+  color: #F5F5DC;
+  font-size: 3.5vh;
+  margin: 2vh 0vh;
+}
+
+#interests .booksPart .digitalBookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#interests .booksPart .digitalBookshelf img {
+  padding: 2vh;
+  width: 25vh;
+  height: auto;
+}
+
+
+/* CONTACTS SECTION */
+
+#contacts .contactsPhrase {
+  font-size: 4vh;
+  text-align: center;
+  padding-bottom: 5vh;
+  color: #F5F5DC;
+}
+
+#contacts .contact img {
+  margin: 0vh 10vh;
+  padding: 3vh;
+  height: auto;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #001F3F;
+  margin-top: 5vh;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  color: #F5F5DC;
+  font-size: 3.5vh;
+  align-items: center;
+  justify-content: center;
+}
