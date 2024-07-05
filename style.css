@@ -14,7 +14,7 @@ body {
 }
 
 #container {
-  margin: 0vh 10vh;
+  margin: 0 5%;
 }
 
 /* It styles the images that are side by side */
@@ -32,7 +32,7 @@ body {
 
 /* It styles all the sections titles */
 .title {
-  font-size: 6vh;
+  font-size: 300%;
   padding-top: 6vh;
   color: #F5F5DC;
   text-align: center;
