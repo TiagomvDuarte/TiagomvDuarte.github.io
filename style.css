@@ -396,6 +396,6 @@ body {
   flex-direction: column;
   color: #F5F5DC;
   font-size: 3.5vh;
-  align-items: center;
   justify-content: center;
+  text-align: center;
 }
