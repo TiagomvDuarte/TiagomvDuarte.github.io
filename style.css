@@ -287,12 +287,12 @@ body {
 }
 
 .timeline-content p {
-  font-size: 3vh;
+  font-size: 120%;
   text-align: center;
 }
 
 .timeline-content h2 {
-  font-size: 4vh;
+  font-size: 150%;
   text-align: center;
 }
 
