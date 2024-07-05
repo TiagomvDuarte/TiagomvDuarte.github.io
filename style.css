@@ -5,11 +5,11 @@
   padding: 0px;
   font-family: 'Quicksand', sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   width: 100%;
-  overflow-x: hidden;
   background-color: #36454F;
 }
 
