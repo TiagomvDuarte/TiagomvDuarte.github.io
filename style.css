@@ -298,15 +298,11 @@ body {
 
 @media screen and (max-width: 800px) {
   .timeline::after {
-    left: 25%;
+    left: 0;
   }
 
   .timeline-item:nth-child(even) {
-    left: 25%;
-  }
-
-  .timeline-item:nth-child(odd) {
-    left: 25%;
+    left: 0;
   }
 
   .timeline-item:nth-child(odd) .timeline-marker {
