@@ -154,6 +154,7 @@ body {
   background-image: url('Photos/display.avif');
   background-size: cover;
   background-position: center;
+  padding: 0 3%;
 }
 
 #display .content {
