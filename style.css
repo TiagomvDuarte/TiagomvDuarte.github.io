@@ -20,24 +20,18 @@ body {
 /* It styles the images that are side by side */
 .sideImages img {
   padding: 1.25vh;
-  width: 30vh;
-  height: auto;
-}
-
-.sideImages img:hover {
-  width: 35vh;
+  width: 27vh;
   height: auto;
 }
 
 
 /* It styles all the sections titles */
 .title {
-  font-size: 300%;
-  padding-top: 6vh;
+  font-size: 40px;
+  padding: 6vh 0;
   color: #F5F5DC;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 6vh;
 }
 
 /* It styles the line bellow every title */
@@ -65,11 +59,10 @@ body {
   background-color: #001F3F;
   position: fixed;
   z-index: 2;
-  padding: env(safe-area-inset-top) 0 10px 0;
 }
 
 #navBar .logo img {
-  height: 5vh;
+  height: 40px;
   width: auto;
 }
 
@@ -164,12 +157,12 @@ body {
 }
 
 #display .content .titleDisplay {
-  font-size: 4vh;
+  font-size: 30px;
 
 }
 
 #display .content .sub-titleDisplay {
-  font-size: 2vh;
+  font-size: 15px;
 }
 
 
@@ -178,7 +171,8 @@ body {
 #aboutMe .biography {
   width: 60%;
   color: #F5F5DC;
-  font-size: 3.5vh;
+  font-size: 25px;
+  padding-right: 2.5vw;
   text-align: justify;
 }
 
@@ -345,7 +339,7 @@ body {
 
 #interests .interestsTitles {
   color: #F5F5DC;
-  font-size: 3.5vh;
+  font-size: 20px;
   margin: 3vh 0;
 }
 
@@ -369,21 +363,15 @@ body {
   display: flex;
   align-items: center;
   color: #F5F5DC;
-  font-size: 3vh;
+  font-size: 20px;
 }
 
 #interests .newsPart .articles .news img {
   margin: 0vh 5vh;
   padding: 1vh;
-  width: 9vh;
-  height: auto;
+  width: auto;
+  height: 9vh;
   border-radius: 20%;
-}
-
-#interests .booksPart header.titleBookshelf {
-  color: #F5F5DC;
-  font-size: 3.5vh;
-  margin: 2vh 0vh;
 }
 
 #interests .booksPart .digitalBookshelf {
@@ -395,20 +383,19 @@ body {
 
 #interests .booksPart .digitalBookshelf img {
   padding: 2vh;
-  width: 25vh;
-  height: auto;
+  width: auto;
+  height: 30vh;
 }
 
 .corner {
   border-radius: 20%;
-
 }
 
 
 /* CONTACTS SECTION */
 
 #contacts .contactsPhrase {
-  font-size: 4vh;
+  font-size: 30px;
   text-align: center;
   padding-bottom: 5vh;
   color: #F5F5DC;
@@ -428,7 +415,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #F5F5DC;
-  font-size: 3.5vh;
+  font-size: 25px;
   justify-content: center;
   text-align: center;
 }
