@@ -91,7 +91,7 @@ body {
 
 }
 
-#navBar .sideBar {
+#navBar #sideBar {
   position: fixed;
   list-style: none;
   top: 0;
@@ -106,11 +106,11 @@ body {
   justify-content: flex-start;
 }
 
-#navBar .sideBar li {
+#navBar #sideBar li {
   margin: 2vh 0;
 }
 
-#navBar .sideBar li a {
+#navBar #sideBar li a {
   font-size: 19px;
   text-decoration: none;
   color: #F5F5DC;
@@ -118,7 +118,7 @@ body {
   border-radius: 20px;
 }
 
-#navBar .sideBar li a:hover {
+#navBar #sideBar li a:hover {
   background-color: #F5F5DC;
   color: #003D7C;
   font-weight: bold;
