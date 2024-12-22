@@ -157,7 +157,7 @@ body {
 }
 
 #display .content .titleDisplay {
-  font-size: 30px;
+  font-size: 50px;
 
 }
 
@@ -393,13 +393,6 @@ body {
 
 
 /* CONTACTS SECTION */
-
-#contacts .contactsPhrase {
-  font-size: 30px;
-  text-align: center;
-  padding-bottom: 5vh;
-  color: #F5F5DC;
-}
 
 #contacts .contact img {
   margin: 0vh 10vh;
