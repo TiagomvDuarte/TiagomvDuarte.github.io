@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const socialLinks = [
   {
@@ -13,12 +13,6 @@ const socialLinks = [
     url: "https://linkedin.com/in/yourusername",
     icon: SiLinkedin,
     color: "hover:text-[#0077b5]",
-  },
-  {
-    name: "X (Twitter)",
-    url: "https://x.com/yourusername",
-    icon: SiX,
-    color: "hover:text-[#000]",
   },
 ];
 
