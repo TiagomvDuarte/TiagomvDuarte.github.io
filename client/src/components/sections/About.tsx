@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Book, 
-  Code2, 
-  GraduationCap, 
+import {
+  Book,
+  Code2,
+  GraduationCap,
   Terminal,
   Coffee,
   Gamepad2,
   Music,
   Camera
 } from "lucide-react";
+import Timeline from "@/components/shared/Timeline";
 
 const techStack = {
   "Languages": ["Java", "Python", "JavaScript/TypeScript", "C#", "SQL"],
@@ -43,18 +44,30 @@ const activities = [
   }
 ];
 
-const education = [
+const timelineItems = [
   {
-    degree: "Master's in Computer Science",
-    institution: "Your University",
-    period: "2020 - 2022",
+    date: "2022 - Present",
+    title: "Software Engineer",
+    subtitle: "Tech Company",
+    description: "Working on full-stack development with modern technologies"
+  },
+  {
+    date: "2020 - 2022",
+    title: "Master's in Computer Science",
+    subtitle: "Your University",
     description: "Focus on Artificial Intelligence and Machine Learning"
   },
   {
-    degree: "Bachelor's in Software Engineering",
-    institution: "Your University",
-    period: "2016 - 2020",
+    date: "2016 - 2020",
+    title: "Bachelor's in Software Engineering",
+    subtitle: "Your University",
     description: "Foundation in software development and engineering principles"
+  },
+  {
+    date: "2015 - 2016",
+    title: "Web Development Internship",
+    subtitle: "Startup Company",
+    description: "First steps in professional web development"
   }
 ];
 
@@ -111,6 +124,15 @@ export default function About() {
               </motion.div>
             </div>
 
+            {/* Timeline Section */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2 justify-center">
+                <GraduationCap className="h-6 w-6 text-primary" />
+                My Journey
+              </h3>
+              <Timeline items={timelineItems} />
+            </div>
+
             {/* Tech Stack Section */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
@@ -142,29 +164,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Education Section */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                <GraduationCap className="h-6 w-6 text-primary" />
-                Education
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {education.map((edu) => (
-                  <motion.div
-                    key={edu.degree}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card"
-                  >
-                    <h4 className="font-semibold text-lg">{edu.degree}</h4>
-                    <p className="text-muted-foreground">{edu.institution}</p>
-                    <p className="text-sm text-muted-foreground">{edu.period}</p>
-                    <p className="mt-2">{edu.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
 
             {/* Activities Section */}
             <div>
