@@ -73,13 +73,43 @@ export default function About() {
           </h2>
 
           <div className="grid gap-12">
-            {/* Profile Section */}
-            <Card className="p-6">
-              <p className="text-lg leading-relaxed">
-                I'm a passionate software developer with a strong foundation in both frontend and backend development.
-                My journey in tech has been driven by curiosity and a desire to create impactful solutions.
-              </p>
-            </Card>
+            {/* Profile Section with Photo */}
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative aspect-square max-w-md mx-auto"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl -rotate-6" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-6" />
+                <Card className="relative overflow-hidden rounded-2xl border-2 border-primary/20">
+                  <img
+                    src="/your-photo.jpg" // Substitua pelo caminho da sua foto
+                    alt="Your Name"
+                    className="w-full h-full object-cover"
+                  />
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Card className="p-6 backdrop-blur-sm bg-card/80">
+                  <h3 className="text-2xl font-semibold mb-4 text-primary">Hello World! 👋</h3>
+                  <p className="text-lg leading-relaxed mb-4">
+                    I'm a passionate software developer with a strong foundation in both frontend and backend development.
+                    My journey in tech has been driven by curiosity and a desire to create impactful solutions.
+                  </p>
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects,
+                    and sharing knowledge with the developer community.
+                  </p>
+                </Card>
+              </motion.div>
+            </div>
 
             {/* Tech Stack Section */}
             <div>
@@ -140,7 +170,7 @@ export default function About() {
             <div>
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <Book className="h-6 w-6 text-primary" />
-                Activities
+                Activities & Interests
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {activities.map((activity) => (
