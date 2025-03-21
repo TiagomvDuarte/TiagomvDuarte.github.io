@@ -6,41 +6,46 @@ import {
   Code2,
   GraduationCap,
   Terminal,
-  Coffee,
-  Gamepad2,
-  Music,
-  Camera
+  Trophy,
+  Heart,
+  Users,
+  Laptop,
+  Music
 } from "lucide-react";
 import Timeline from "@/components/shared/Timeline";
 
 const techStack = {
-  "Languages": ["Java", "Python", "JavaScript/TypeScript", "C#", "SQL"],
-  "Frontend": ["React", "Next.js", "Tailwind CSS", "Material-UI"],
-  "Backend": ["Node.js", "Express", "Spring Boot", "ASP.NET"],
-  "Database": ["PostgreSQL", "MongoDB", "Redis"],
-  "Tools": ["Git", "Docker", "AWS", "Azure"],
+  "Frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+  "Backend": ["Node.js", "Python", "PostgreSQL", "Redis"],
+  "DevOps": ["Docker", "AWS", "CI/CD", "Git"],
+  "Tools": ["VS Code", "Figma", "Postman", "Jest"],
 };
 
 const activities = [
   {
-    icon: Coffee,
-    title: "Coffee & Code",
-    description: "Passionate about programming while enjoying a good cup of coffee"
+    icon: Trophy,
+    title: "Tennis",
+    description: "Competição e exercício físico através do tênis"
   },
   {
-    icon: Gamepad2,
-    title: "Gaming",
-    description: "Enthusiast of strategy and RPG games"
+    icon: Heart,
+    title: "Voluntariado",
+    description: "Contribuindo para causas sociais e ambientais"
+  },
+  {
+    icon: Users,
+    title: "Networking",
+    description: "Conectando e colaborando com outros profissionais"
+  },
+  {
+    icon: Laptop,
+    title: "Tech",
+    description: "Explorando novas tecnologias e inovações"
   },
   {
     icon: Music,
-    title: "Music",
-    description: "Playing guitar and discovering new genres"
-  },
-  {
-    icon: Camera,
-    title: "Photography",
-    description: "Capturing moments and exploring different perspectives"
+    title: "Guitarra",
+    description: "Expressão musical e criatividade"
   }
 ];
 
@@ -139,22 +144,22 @@ export default function About() {
                 <Code2 className="h-6 w-6 text-primary" />
                 Tech Stack
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {Object.entries(techStack).map(([category, technologies]) => (
                   <motion.div
                     key={category}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="space-y-3"
+                    className="p-6 rounded-lg bg-card/80 backdrop-blur-sm"
                   >
-                    <h4 className="font-medium text-lg flex items-center gap-2">
+                    <h4 className="font-medium text-lg flex items-center gap-2 mb-4">
                       <Terminal className="h-4 w-4 text-primary" />
                       {category}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary">
+                        <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
                           {tech}
                         </Badge>
                       ))}
@@ -171,14 +176,14 @@ export default function About() {
                 <Book className="h-6 w-6 text-primary" />
                 Activities & Interests
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                 {activities.map((activity) => (
                   <motion.div
                     key={activity.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card text-center"
+                    className="p-6 rounded-lg bg-card/80 backdrop-blur-sm text-center"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
