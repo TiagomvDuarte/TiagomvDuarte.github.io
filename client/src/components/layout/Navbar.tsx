@@ -73,7 +73,7 @@ export default function Navbar() {
                 className={`h-8 transition-all duration-300 ${
                   scrolled || isOpen 
                     ? 'brightness-100 dark:brightness-100 filter-primary' 
-                    : 'brightness-[1000] dark:brightness-[1000]'
+                    : 'brightness-[0.95] dark:brightness-[0.95] sepia-[0.45] saturate-[0.15] hue-rotate-[20deg]'
                 }`}
                 style={{
                   filter: scrolled || isOpen 
