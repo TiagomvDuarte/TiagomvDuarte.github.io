@@ -43,6 +43,12 @@ const activities = [
     title: "Cambridge School Classes",
     date: "September 2017 - July 2023",
     description: "4 times/week"
+  },
+  {
+    icon: PiGuitarFill,
+    title: "Guitar Classes",
+    date: "October 2015 - July 2020",
+    description: "Once a week"
   }
 ];
 
