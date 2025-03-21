@@ -80,6 +80,11 @@ const timelineItems = [
   }
 ];
 
+const quote = {
+  text: "I want to understand the big questions, the really big ones that you normally go into philosophy or physics if you're interested in. I thought building AI would be the fastest route to answer some of those questions.",
+  author: "Demis Hassabis"
+};
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-muted/10">
@@ -204,6 +209,22 @@ export default function About() {
                   </motion.div>
                 ))}
               </div>
+            </div>
+
+            {/* Quote Section */}
+            <div className="mt-20">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="max-w-3xl mx-auto"
+              >
+                <Card className="p-8 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">
+                  <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
+                  <p className="text-lg text-primary">- {quote.author}</p>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </motion.div>
