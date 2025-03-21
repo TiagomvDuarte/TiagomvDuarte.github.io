@@ -14,7 +14,7 @@
     "light": {
       "background": "hsl(0, 0%, 100%)",
       "foreground": "hsl(230, 15%, 15%)",
-      "card": "hsl(0, 0%, 98%)",
+      "card": "hsl(0, 0%, 96%)",
       "muted": "hsl(230, 15%, 95%)",
       "accent": "hsl(230, 60%, 50%)"
     }

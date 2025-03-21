@@ -125,7 +125,7 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 backdrop-blur-sm bg-card/80">
+                <Card className="p-6 backdrop-blur-sm bg-card hover:bg-card/90 transition-colors">
                   <h3 className="text-2xl font-bold mb-4 text-primary">WHO AM I?</h3>
                   <p className="text-lg leading-relaxed mb-4 text-foreground">
                     I am currently 20 years old, pursuing a Bachelor's degree in Computer Science and Engineering at NOVA School of Science and Technology in Lisbon, Portugal and eagerly anticipating the opportunity to pursue a master's degree in Data Science.
