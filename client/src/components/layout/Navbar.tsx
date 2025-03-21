@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import { HiMail } from "react-icons/hi";
 import ThemeToggle from "@/components/shared/ThemeToggle";
 
 const navItems = [
@@ -15,6 +16,12 @@ const navItems = [
 ];
 
 const socialLinks = [
+  {
+    name: "Email",
+    url: "mailto:tiagomvduarte24@gmail.com",
+    icon: HiMail,
+    color: "hover:text-primary",
+  },
   {
     name: "GitHub",
     url: "https://github.com/TiagomvDuarte",
@@ -64,8 +71,15 @@ export default function Navbar() {
                 src="/WebsiteLogo.png" 
                 alt="Tiago Duarte"
                 className={`h-8 transition-all duration-300 ${
-                  scrolled || isOpen ? 'brightness-50 dark:brightness-100' : 'brightness-200'
+                  scrolled || isOpen 
+                    ? 'brightness-100 dark:brightness-100 filter-primary' 
+                    : 'brightness-[1000] dark:brightness-[1000]'
                 }`}
+                style={{
+                  filter: scrolled || isOpen 
+                    ? 'invert(31%) sepia(93%) saturate(1352%) hue-rotate(213deg) brightness(105%) contrast(107%)' 
+                    : 'none'
+                }}
               />
             </a>
           </Link>

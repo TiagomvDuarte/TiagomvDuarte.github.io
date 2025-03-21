@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import { HiMail } from "react-icons/hi";
 
 const socialLinks = [
+  {
+    name: "Email",
+    url: "mailto:tiagomvduarte24@gmail.com",
+    icon: HiMail,
+    color: "hover:text-primary",
+  },
   {
     name: "GitHub",
     url: "https://github.com/TiagomvDuarte",
