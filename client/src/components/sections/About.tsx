@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
-import { GB } from 'country-flag-icons/react/3x2';
 import UKFlagIcon from "@/components/shared/UKFlagIcon";
 import Timeline from "@/components/shared/Timeline";
 
@@ -34,7 +33,7 @@ const activities = [
     description: "University Ambassador"
   },
   {
-    icon: GB,
+    icon: UKFlagIcon,
     title: "Cambridge School",
     description: "Classes 4 hours/week",
     date: "September 2017 - July 2023"
@@ -54,9 +53,9 @@ const activities = [
 ];
 
 const techStack = {
-  "Languages": ["Java", "OCaml", "SQL", "C", "Python", "JavaScript"],
-  "AI & Data Science": ["AutoGen", "Semantic Kernel", "TensorFlow", "NumPy", "Pandas", "R", "MATLAB"],
-  "Tools & DevOps": ["Docker", "GitHub", "IntelliJ"],
+  "Languages": ["**Java**", "**OCaml**", "**SQL**", "**C**", "**Python**", "**JavaScript**"],
+  "AI & Data Science": ["**AutoGen**", "**Semantic Kernel**", "**TensorFlow**", "**NumPy**", "**Pandas**", "**R**", "**MATLAB**"],
+  "Tools & DevOps": ["**Docker**", "**GitHub**", "**IntelliJ**", "**Maven**", "**Gradle**", "**Canva**", "**Oracle VM**", "**Ubuntu**", "**VS Code**"],
 };
 
 const timelineItems = [

@@ -12,6 +12,7 @@ export default function UKFlagIcon(props: SVGProps<SVGSVGElement>) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="text-primary"
       {...props}
     >
       {/* Horizontal line */}
