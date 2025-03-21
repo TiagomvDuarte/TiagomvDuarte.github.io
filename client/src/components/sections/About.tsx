@@ -10,15 +10,16 @@ import {
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
+import { GB } from 'country-flag-icons/react/3x2';
 import UKFlagIcon from "@/components/shared/UKFlagIcon";
 import Timeline from "@/components/shared/Timeline";
 
 const activities = [
   {
-    icon: GiTennisRacket,
-    title: "Tennis Classes",
-    date: "September 2014 - Present",
-    description: "Twice a week"
+    icon: Monitor,
+    title: "NTT DATA",
+    date: "October 2024 - Present",
+    description: "University Ambassador"
   },
   {
     icon: Droplet,
@@ -27,10 +28,16 @@ const activities = [
     description: "Member of Logistics Department - Team FCT NOVA"
   },
   {
-    icon: Monitor,
-    title: "NTT DATA",
-    date: "October 2024 - Present",
+    icon: User,
+    title: "Magma Studio",
+    date: "March 2024 - October 2024",
     description: "University Ambassador"
+  },
+  {
+    icon: GB,
+    title: "Cambridge School",
+    description: "Classes 4 hours/week",
+    date: "September 2017 - July 2023"
   },
   {
     icon: PiGuitarFill,
@@ -39,16 +46,10 @@ const activities = [
     description: "Once a week"
   },
   {
-    icon: User,
-    title: "Magma Studio",
-    date: "March 2024 - October 2024",
-    description: "University Ambassador"
-  },
-  {
-    icon: UKFlagIcon,
-    title: "Cambridge School",
-    description: "Classes 4 hours/week",
-    date: "September 2017 - July 2023"
+    icon: GiTennisRacket,
+    title: "Tennis Classes",
+    date: "September 2014 - Present",
+    description: "Twice a week"
   }
 ];
 
@@ -92,7 +93,7 @@ const quote = {
   author: "Demis Hassabis"
 };
 
-export default function About() {
+const About = () => {
   return (
     <section id="about" className="py-20 bg-muted/10">
       <div className="container mx-auto px-6">
@@ -231,4 +232,6 @@ export default function About() {
       </div>
     </section>
   );
-}
+};
+
+export default About;
