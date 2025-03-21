@@ -7,10 +7,10 @@ import {
   Droplet,
   Monitor,
   User,
+  Flag,
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
-import { GB } from "country-flag-icons/react/3x2";  // Using country-flag-icons for proper UK flag
 import Timeline from "@/components/shared/Timeline";
 
 const activities = [
@@ -45,11 +45,10 @@ const activities = [
     description: "University Ambassador"
   },
   {
-    icon: GB,
+    icon: Flag,
     title: "Cambridge School",
-    subtitle: "Classes",
-    date: "September 2017 - July 2023",
-    description: "4 hours/week"
+    description: "Classes 4 hours/week",
+    date: "September 2017 - July 2023"
   }
 ];
 
@@ -201,10 +200,10 @@ export default function About() {
               </div>
             </div>
 
-            <div id="interests" className="scroll-mt-32">
+            <div id="activities" className="scroll-mt-32">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <User className="h-6 w-6 text-primary" />
-                Activities & Interests
+                Activities
               </h3>
               <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                 {activities.map((activity) => (
@@ -219,7 +218,6 @@ export default function About() {
                   >
                     <activity.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
                     <h4 className="font-semibold mb-2">{activity.title}</h4>
-                    {activity.subtitle && <p className="text-sm text-primary mb-1">{activity.subtitle}</p>}
                     <p className="text-sm text-primary mb-1">{activity.date}</p>
                     <p className="text-sm text-muted-foreground">
                       {activity.description}

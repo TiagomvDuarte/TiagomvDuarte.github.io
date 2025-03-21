@@ -11,7 +11,7 @@ const navItems = [
   { href: "#about", label: "About" },
   { href: "#journey", label: "My Journey" },
   { href: "#tech-stack", label: "Tech Stack" },
-  { href: "#interests", label: "Interests" },
+  { href: "#activities", label: "Activities" },
 ];
 
 const socialLinks = [
