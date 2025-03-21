@@ -93,7 +93,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            About Me
+            WHO AM I?
           </h2>
 
           <div className="grid gap-12">
@@ -122,14 +122,15 @@ export default function About() {
                 viewport={{ once: true }}
               >
                 <Card className="p-6 backdrop-blur-sm bg-card/80">
-                  <h3 className="text-2xl font-semibold mb-4 text-primary">Hello World! 👋</h3>
+                  <h3 className="text-2xl font-semibold mb-4 text-primary">WHO AM I?</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    I'm a passionate software developer with a strong foundation in both frontend and backend development.
-                    My journey in tech has been driven by curiosity and a desire to create impactful solutions.
+                    I am currently 20 years old, pursuing a Bachelor's degree in Computer Science and Engineering at NOVA School of Science and Technology in Lisbon, Portugal and eagerly anticipating the opportunity to pursue a master's degree in Data Science.
+                  </p>
+                  <p className="text-lg leading-relaxed mb-4">
+                    My interests range from technology to global and social affairs, and I am particularly interested in integrating these interests whenever possible. I have a strong passion for learning and continually expanding my knowledge in areas such as Artificial Intelligence and Data Science, exploring their profound impact on the world.
                   </p>
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects,
-                    and sharing knowledge with the developer community.
+                    Driven by a desire to understand the intersection of technology and society, I am committed to exploring how advancements in these fields can positively impact the world around us.
                   </p>
                 </Card>
               </motion.div>
