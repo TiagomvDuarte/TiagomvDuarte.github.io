@@ -66,8 +66,9 @@ const timelineItems = [
   },
   {
     date: "March 2025 - July 2025",
-    title: "Unipartner Curricular Internship",
-    description: "Building AI Agents"
+    title: "Building AI Agents - Unipartner",
+    subtitle: "Curricular Internship",
+    description: ""
   },
   {
     date: "September 2022 - Present",
