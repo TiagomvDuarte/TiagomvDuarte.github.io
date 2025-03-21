@@ -7,6 +7,7 @@ import {
   Droplet,
   Monitor,
   User,
+  Flag
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
@@ -38,10 +39,10 @@ const activities = [
     description: "Ambassador"
   },
   {
-    icon: PiGuitarFill,
-    title: "Guitar Classes",
-    date: "October 2015 - July 2020",
-    description: "Once a week"
+    icon: Flag,
+    title: "Cambridge School Classes",
+    date: "September 2017 - July 2023",
+    description: "4 times/week"
   }
 ];
 
@@ -72,11 +73,6 @@ const timelineItems = [
     title: "High School in Science & Technology Course",
     description: "Average: 17.7"
   },
-  {
-    date: "September 2017 - July 2023",
-    title: "Cambridge School Classes",
-    description: "4 times/week"
-  }
 ];
 
 const quote = {
@@ -124,7 +120,7 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 backdrop-blur-sm bg-card hover:bg-card/90 transition-colors">
+                <Card className="p-6 bg-card hover:bg-card transition-colors">
                   <h3 className="text-2xl font-bold mb-4 text-primary">WHO AM I?</h3>
                   <p className="text-lg leading-relaxed mb-4 text-foreground">
                     I am currently 20 years old, pursuing a Bachelor's degree in Computer Science and Engineering at NOVA School of Science and Technology in Lisbon, Portugal and eagerly anticipating the opportunity to pursue a master's degree in Data Science.
@@ -147,7 +143,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="max-w-3xl mx-auto"
             >
-              <Card className="p-8 backdrop-blur-sm bg-card/90 hover:bg-card/100 transition-colors text-center">
+              <Card className="p-8 bg-card hover:bg-card transition-colors text-center">
                 <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
                 <p className="text-lg text-primary">- {quote.author}</p>
               </Card>
@@ -175,7 +171,7 @@ export default function About() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card/90 backdrop-blur-sm hover:bg-card transition-colors"
+                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors"
                   >
                     <h4 className="font-medium text-lg flex items-center gap-2 mb-4">
                       <Terminal className="h-4 w-4 text-primary" />
@@ -209,7 +205,7 @@ export default function About() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card/90 backdrop-blur-sm hover:bg-card transition-colors text-center"
+                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors text-center"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
