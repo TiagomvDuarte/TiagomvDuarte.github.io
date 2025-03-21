@@ -49,7 +49,9 @@ export default function Navbar() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <a className="text-2xl font-bold text-primary">Tiago Duarte</a>
+            <a className={`text-2xl font-bold ${scrolled ? 'text-primary' : 'text-foreground'} transition-colors`}>
+              Tiago Duarte
+            </a>
           </Link>
 
           {/* Desktop Menu */}
