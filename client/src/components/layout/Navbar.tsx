@@ -14,13 +14,13 @@ const navItems = [
 const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/TiagomvDuarte",
     icon: SiGithub,
     color: "hover:text-[#333] dark:hover:text-[#fff]",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/tiago-duarte-628278263/",
     icon: SiLinkedin,
     color: "hover:text-[#0077b5]",
   },

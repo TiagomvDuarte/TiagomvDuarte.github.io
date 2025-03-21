@@ -58,7 +58,7 @@ export default function Hero() {
               <span className="sr-only">Email</span>
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/TiagomvDuarte"
               className="text-muted-foreground hover:text-[#333] dark:hover:text-white transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
@@ -67,7 +67,7 @@ export default function Hero() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/tiago-duarte-628278263/"
               className="text-muted-foreground hover:text-[#0077b5] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
