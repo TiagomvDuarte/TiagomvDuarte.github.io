@@ -18,8 +18,8 @@ export default function Hero() {
   return (
     <section ref={ref} id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Image */}
-      <motion.div 
-        style={{ y, opacity }} 
+      <motion.div
+        style={{ y, opacity }}
         className="absolute inset-0 z-0"
       >
         <img
@@ -48,7 +48,7 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto"
           >
-            A passionate full-stack developer crafting beautiful and functional web experiences
+            I'm a Computer Science student and a tech enthusiast
           </motion.p>
 
           {/* Contact Links */}
