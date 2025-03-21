@@ -6,14 +6,17 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Set correct MIME types for module scripts
-app.use(express.static('dist/public', {
-  setHeaders: (res, path) => {
-    if (path.endsWith('.js') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
-      res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
-    }
+// Configure MIME types
+app.use((req, res, next) => {
+  const jsExtensions = ['.js', '.mjs', '.ts', '.tsx', '.jsx'];
+  if (jsExtensions.some(ext => req.url.endsWith(ext))) {
+    res.type('application/javascript');
   }
-}));
+  next();
+});
+
+// Serve static files
+app.use(express.static('dist/public'));
 
 if (process.env.NODE_ENV === 'development') {
   app.use(express.static('client', {
