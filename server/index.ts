@@ -6,17 +6,25 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Configure MIME types
-app.use((req, res, next) => {
-  const jsExtensions = ['.js', '.mjs', '.ts', '.tsx', '.jsx'];
-  if (jsExtensions.some(ext => req.url.endsWith(ext))) {
-    res.type('application/javascript');
+// Configure MIME types and static file serving
+app.use(express.static('dist/public', {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.js') || path.endsWith('.mjs') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
+      res.setHeader('Content-Type', 'text/javascript; charset=utf-8');
+    }
   }
-  next();
-});
+}));
 
-// Serve static files
-app.use(express.static('dist/public'));
+// Development mode static file serving
+if (process.env.NODE_ENV === 'development') {
+  app.use(express.static('client', {
+    setHeaders: (res, path) => {
+      if (path.endsWith('.js') || path.endsWith('.mjs') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
+        res.setHeader('Content-Type', 'text/javascript; charset=utf-8');
+      }
+    }
+  }));
+}
 
 if (process.env.NODE_ENV === 'development') {
   app.use(express.static('client', {
