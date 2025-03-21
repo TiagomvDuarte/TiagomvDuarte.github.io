@@ -17,11 +17,21 @@ export default function Hero() {
 
   return (
     <section ref={ref} id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <motion.div style={{ y }} className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-background" />
+      {/* Background Image */}
+      <motion.div 
+        style={{ y, opacity }} 
+        className="absolute inset-0 z-0"
+      >
+        <img
+          src="/attached_assets/display.avif"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/50 backdrop-blur-sm" />
+      </motion.div>
 
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          style={{ opacity }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -92,35 +102,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Animated background shapes */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ delay: 1 }}
-      >
-        {[...Array(3)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-[500px] h-[500px] rounded-full bg-primary/5"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${10 + i * 20}%`,
-            }}
-            animate={{
-              scale: [1, 1.2, 1],
-              x: [0, 30, 0],
-              y: [0, 20, 0],
-            }}
-            transition={{
-              duration: 8 + i * 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </motion.div>
     </section>
   );
 }
