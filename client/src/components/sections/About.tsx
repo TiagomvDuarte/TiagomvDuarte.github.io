@@ -140,6 +140,20 @@ export default function About() {
               </motion.div>
             </div>
 
+            {/* Quote Section - Moved here */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-3xl mx-auto"
+            >
+              <Card className="p-8 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">
+                <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
+                <p className="text-lg text-primary">- {quote.author}</p>
+              </Card>
+            </motion.div>
+
             {/* Timeline Section */}
             <div>
               <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2 justify-center">
@@ -209,22 +223,6 @@ export default function About() {
                   </motion.div>
                 ))}
               </div>
-            </div>
-
-            {/* Quote Section */}
-            <div className="mt-20">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl mx-auto"
-              >
-                <Card className="p-8 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">
-                  <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
-                  <p className="text-lg text-primary">- {quote.author}</p>
-                </Card>
-              </motion.div>
             </div>
           </div>
         </motion.div>
