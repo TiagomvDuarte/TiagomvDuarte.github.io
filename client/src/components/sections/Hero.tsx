@@ -5,21 +5,6 @@ import { useRef } from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
 
-const quotes = [
-  {
-    text: "O código é poesia em movimento",
-    author: "Anonymous"
-  },
-  {
-    text: "A simplicidade é a sofisticação suprema",
-    author: "Leonardo da Vinci"
-  },
-  {
-    text: "Inovação distingue um líder de um seguidor",
-    author: "Steve Jobs"
-  }
-];
-
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -107,23 +92,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Floating Quote */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-32 right-10 max-w-md bg-card/30 backdrop-blur-sm p-6 rounded-lg border border-primary/10"
-      >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-        >
-          <p className="text-lg italic text-muted-foreground">"{quotes[0].text}"</p>
-          <p className="text-sm text-primary mt-2">- {quotes[0].author}</p>
-        </motion.div>
-      </motion.div>
 
       {/* Animated background shapes */}
       <motion.div
