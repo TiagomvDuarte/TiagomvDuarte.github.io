@@ -129,6 +129,8 @@ const About = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
               >
                 <Card className="p-6 bg-card hover:bg-card transition-colors">
                   <h3 className="text-2xl font-bold mb-4 text-primary">WHO AM I?</h3>
@@ -151,6 +153,8 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="max-w-3xl mx-auto"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             >
               <Card className="p-8 bg-card hover:bg-card transition-colors text-center">
                 <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
@@ -179,6 +183,8 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="p-6 rounded-lg bg-card hover:bg-card transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
                   >
                     <h4 className="font-medium text-lg flex items-center gap-2 mb-4">
                       <Terminal className="h-4 w-4 text-primary" />
