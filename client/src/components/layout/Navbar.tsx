@@ -50,7 +50,7 @@ export default function Navbar() {
       {/* Background overlay with animation */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: scrolled ? 1 : 0 }}
+        animate={{ opacity: scrolled || isOpen ? 1 : 0 }}
         className="absolute inset-0 bg-background/80 backdrop-blur-md shadow-md"
         transition={{ duration: 0.3 }}
       />
@@ -59,7 +59,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
           <Link href="/">
-            <a className={`text-2xl font-bold whitespace-nowrap ${scrolled ? 'text-primary' : 'text-white'} transition-colors`}>
+            <a className={`text-2xl font-bold whitespace-nowrap ${scrolled || isOpen ? 'text-primary' : 'text-white'} transition-colors`}>
               Tiago Duarte
             </a>
           </Link>
