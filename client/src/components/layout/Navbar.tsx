@@ -51,28 +51,15 @@ export default function Navbar() {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            {/* Mobile Menu Button - Moved to left */}
-            <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                {isOpen ? <X /> : <Menu />}
-              </Button>
-            </div>
-
-            {/* Logo/Name */}
-            <Link href="/">
-              <a className={`text-2xl font-bold whitespace-nowrap ${scrolled ? 'text-primary' : 'text-white'} transition-colors`}>
-                Tiago Duarte
-              </a>
-            </Link>
-          </div>
+          {/* Logo/Name */}
+          <Link href="/">
+            <a className={`text-2xl font-bold whitespace-nowrap ${scrolled ? 'text-primary' : 'text-white'} transition-colors`}>
+              Tiago Duarte
+            </a>
+          </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -89,29 +76,33 @@ export default function Navbar() {
               </a>
             ))}
 
-            {/* Theme Toggle + Social Links */}
-            <div className="flex items-center space-x-4">
-              <ThemeToggle />
-              {socialLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-muted-foreground ${link.color} transition-all duration-300`}
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <link.icon className="w-6 h-6" />
-                  <span className="sr-only">{link.name}</span>
-                </motion.a>
-              ))}
-            </div>
+            {/* Social Links */}
+            {socialLinks.map((link) => (
+              <motion.a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-muted-foreground ${link.color} transition-all duration-300`}
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <link.icon className="w-6 h-6" />
+                <span className="sr-only">{link.name}</span>
+              </motion.a>
+            ))}
           </div>
 
-          {/* Mobile Right Side Icons */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Right Side Controls */}
+          <div className="lg:hidden flex items-center space-x-4">
             <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X /> : <Menu />}
+            </Button>
           </div>
         </div>
 
@@ -121,7 +112,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden pt-4 pb-6"
+            className="lg:hidden pt-4 pb-6"
           >
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
