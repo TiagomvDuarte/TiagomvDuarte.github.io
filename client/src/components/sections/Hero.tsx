@@ -27,7 +27,7 @@ export default function Hero() {
           alt="Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-md" />
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       </motion.div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -39,14 +39,14 @@ export default function Hero() {
         >
           <AnimatedText
             text="Hi, I'm Tiago Duarte"
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-20 text-foreground"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-20 text-white"
           />
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto"
           >
             I'm a Computer Science student and a tech enthusiast
           </motion.p>
@@ -60,7 +60,7 @@ export default function Hero() {
           >
             <a
               href="mailto:your.email@example.com"
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-white/60 hover:text-primary transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -69,7 +69,7 @@ export default function Hero() {
             </a>
             <a
               href="https://github.com/TiagomvDuarte"
-              className="text-muted-foreground hover:text-[#333] dark:hover:text-white transition-colors duration-300"
+              className="text-white/60 hover:text-white transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -78,7 +78,7 @@ export default function Hero() {
             </a>
             <a
               href="https://www.linkedin.com/in/tiago-duarte-628278263/"
-              className="text-muted-foreground hover:text-[#0077b5] transition-colors duration-300"
+              className="text-white/60 hover:text-[#0077b5] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -98,7 +98,7 @@ export default function Hero() {
               });
             }}
           >
-            <ArrowDown className="w-8 h-8 text-primary/60" />
+            <ArrowDown className="w-8 h-8 text-white/60" />
           </motion.div>
         </motion.div>
       </div>
