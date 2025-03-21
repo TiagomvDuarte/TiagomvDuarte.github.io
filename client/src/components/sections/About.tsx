@@ -24,28 +24,33 @@ const techStack = {
 const activities = [
   {
     icon: GiTennisRacket,
-    title: "Tennis",
-    description: "Competição e exercício físico através do tênis"
+    title: "Tennis Classes",
+    date: "September 2014 - Present",
+    description: "Twice a week"
   },
   {
     icon: Heart,
-    title: "Voluntariado",
-    description: "Contribuindo para causas sociais e ambientais"
+    title: "Thirst Project Portugal",
+    date: "May 2024 - Present",
+    description: "Member of Logistics Department - Team FCT NOVA"
   },
   {
     icon: Users,
-    title: "Networking",
-    description: "Conectando e colaborando com outros profissionais"
+    title: "NTT DATA",
+    date: "October 2024 - Present",
+    description: "University Ambassador"
   },
   {
-    icon: Laptop,
-    title: "Tech",
-    description: "Explorando novas tecnologias e inovações"
+    icon: Users,
+    title: "Magma Studio",
+    date: "March 2024 - October 2024",
+    description: "Ambassador"
   },
   {
     icon: Music,
-    title: "Guitarra",
-    description: "Expressão musical e criatividade"
+    title: "Guitar Classes",
+    date: "October 2015 - July 2020",
+    description: "Once a week"
   }
 ];
 
@@ -190,6 +195,7 @@ export default function About() {
                   >
                     <activity.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
                     <h4 className="font-semibold mb-2">{activity.title}</h4>
+                    <p className="text-sm text-primary mb-1">{activity.date}</p>
                     <p className="text-sm text-muted-foreground">
                       {activity.description}
                     </p>
