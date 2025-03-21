@@ -51,11 +51,25 @@ export default function Navbar() {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/">
-            <a className={`text-2xl font-bold ${scrolled ? 'text-primary' : 'text-white'} transition-colors`}>
-              Tiago Duarte
-            </a>
-          </Link>
+          <div className="flex items-center space-x-4">
+            {/* Mobile Menu Button - Moved to left */}
+            <div className="md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {isOpen ? <X /> : <Menu />}
+              </Button>
+            </div>
+
+            {/* Logo/Name */}
+            <Link href="/">
+              <a className={`text-2xl font-bold whitespace-nowrap ${scrolled ? 'text-primary' : 'text-white'} transition-colors`}>
+                Tiago Duarte
+              </a>
+            </Link>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -76,7 +90,7 @@ export default function Navbar() {
             ))}
 
             {/* Theme Toggle + Social Links */}
-            <div className="flex items-center space-x-4 ml-4">
+            <div className="flex items-center space-x-4">
               <ThemeToggle />
               {socialLinks.map((link) => (
                 <motion.a
@@ -95,16 +109,9 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          {/* Mobile Right Side Icons */}
+          <div className="md:hidden flex items-center">
             <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X /> : <Menu />}
-            </Button>
           </div>
         </div>
 
