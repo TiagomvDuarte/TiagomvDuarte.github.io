@@ -53,9 +53,9 @@ const activities = [
 ];
 
 const techStack = {
-  "Languages": ["**Java**", "**OCaml**", "**SQL**", "**C**", "**Python**", "**JavaScript**"],
-  "AI & Data Science": ["**AutoGen**", "**Semantic Kernel**", "**TensorFlow**", "**NumPy**", "**Pandas**", "**R**", "**MATLAB**"],
-  "Tools & DevOps": ["**Docker**", "**GitHub**", "**IntelliJ**", "**Maven**", "**Gradle**", "**Canva**", "**Oracle VM**", "**Ubuntu**", "**VS Code**"],
+  "Languages": ["Java", "OCaml", "SQL", "C", "Python", "JavaScript"],
+  "AI & Data Science": ["AutoGen", "Semantic Kernel", "TensorFlow", "NumPy", "Pandas", "Matplotlib", "R", "MATLAB"],
+  "Tools & DevOps": ["Docker", "Git", "GitHub", "IntelliJ", "Maven", "Gradle", "Canva", "Oracle VM", "Ubuntu", "VS Code"],
 };
 
 const timelineItems = [
@@ -189,7 +189,7 @@ const About = () => {
                       {technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20"
+                          className="px-2 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 font-bold"
                         >
                           {tech}
                         </span>
