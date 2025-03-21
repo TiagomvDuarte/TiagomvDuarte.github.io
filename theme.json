@@ -2,5 +2,21 @@
   "variant": "professional",
   "primary": "hsl(230, 60%, 50%)",
   "appearance": "system",
-  "radius": 0.75
+  "radius": 0.75,
+  "colors": {
+    "dark": {
+      "background": "hsl(230, 15%, 15%)",
+      "foreground": "hsl(230, 15%, 85%)",
+      "card": "hsl(230, 15%, 20%)",
+      "muted": "hsl(230, 15%, 25%)",
+      "accent": "hsl(230, 60%, 50%)"
+    },
+    "light": {
+      "background": "hsl(0, 0%, 100%)",
+      "foreground": "hsl(230, 15%, 15%)",
+      "card": "hsl(0, 0%, 98%)",
+      "muted": "hsl(230, 15%, 95%)",
+      "accent": "hsl(230, 60%, 50%)"
+    }
+  }
 }
