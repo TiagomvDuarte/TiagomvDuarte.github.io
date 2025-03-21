@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
-import { GrLanguage } from "react-icons/gr"; // UK language icon
+import { GB } from "country-flag-icons/react/3x2";  // Using country-flag-icons for proper UK flag
 import Timeline from "@/components/shared/Timeline";
 
 const activities = [
@@ -45,7 +45,7 @@ const activities = [
     description: "University Ambassador"
   },
   {
-    icon: GrLanguage,
+    icon: GB,
     title: "Cambridge School",
     subtitle: "Classes",
     date: "September 2017 - July 2023",
@@ -103,7 +103,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center gap-2 pt-16">
             <User className="h-8 w-8 text-primary" />
             ABOUT ME
           </h2>
@@ -160,7 +160,7 @@ export default function About() {
               </Card>
             </motion.div>
 
-            <div id="journey" className="mt-20">
+            <div id="journey" className="scroll-mt-32">
               <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2 justify-center">
                 <GraduationCap className="h-6 w-6 text-primary" />
                 My Journey
@@ -168,7 +168,7 @@ export default function About() {
               <Timeline items={timelineItems} />
             </div>
 
-            <div id="tech-stack" className="mt-20">
+            <div id="tech-stack" className="scroll-mt-32">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <Code2 className="h-6 w-6 text-primary" />
                 Tech Stack
@@ -201,7 +201,7 @@ export default function About() {
               </div>
             </div>
 
-            <div id="interests" className="mt-20">
+            <div id="interests" className="scroll-mt-32">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <User className="h-6 w-6 text-primary" />
                 Activities & Interests
