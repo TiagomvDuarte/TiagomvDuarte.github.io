@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 
 const quote = {
-  text: "O código é poesia em movimento",
-  author: "Anonymous"
+  text: "I want to understand the big questions, the really big ones that you normally go into philosophy or physics if you're interested in. I thought building AI would be the fastest route to answer some of those questions.",
+  author: "Demis Hassabis"
 };
 
 export default function Quotes() {
@@ -26,10 +26,10 @@ export default function Quotes() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto"
+            className="max-w-3xl mx-auto"
           >
             <Card className="p-8 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">
-              <p className="text-2xl italic text-muted-foreground mb-6">"{quote.text}"</p>
+              <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
               <p className="text-lg text-primary">- {quote.author}</p>
             </Card>
           </motion.div>
