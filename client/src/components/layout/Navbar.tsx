@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import ThemeToggle from "@/components/shared/ThemeToggle";
 
 const navItems = [
   { href: "#hero", label: "Home" },
@@ -16,7 +17,7 @@ const socialLinks = [
     name: "GitHub",
     url: "https://github.com/yourusername",
     icon: SiGithub,
-    color: "hover:text-[#333]",
+    color: "hover:text-[#333] dark:hover:text-[#fff]",
   },
   {
     name: "LinkedIn",
@@ -70,8 +71,9 @@ export default function Navbar() {
               </a>
             ))}
 
-            {/* Social Links */}
+            {/* Theme Toggle + Social Links */}
             <div className="flex items-center space-x-4 ml-4">
+              <ThemeToggle />
               {socialLinks.map((link) => (
                 <motion.a
                   key={link.name}
@@ -90,14 +92,16 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
-          </Button>
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X /> : <Menu />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
