@@ -10,8 +10,8 @@ import {
   Users,
   Laptop,
   Music,
-  Dumbbell 
 } from "lucide-react";
+import { GiTennisRacket } from "react-icons/gi";
 import Timeline from "@/components/shared/Timeline";
 
 const techStack = {
@@ -23,7 +23,7 @@ const techStack = {
 
 const activities = [
   {
-    icon: Dumbbell,
+    icon: GiTennisRacket,
     title: "Tennis",
     description: "Competição e exercício físico através do tênis"
   },
@@ -103,7 +103,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-6" />
                 <Card className="relative overflow-hidden rounded-2xl border-2 border-primary/20">
                   <img
-                    src="/your-photo.jpg" 
+                    src="/your-photo.jpg"
                     alt="Your Name"
                     className="w-full h-full object-cover"
                   />
