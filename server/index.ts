@@ -5,28 +5,21 @@ import { setupVite, serveStatic, log } from "./vite";
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use((req, res, next) => {
-  if (req.url.endsWith('.tsx') || req.url.endsWith('.ts') || req.url.endsWith('.jsx') || req.url.endsWith('.js')) {
-    res.type('text/javascript');
-  }
-  next();
-});
 
-// Configure static file serving with correct MIME types
+// Set correct MIME types for module scripts
 app.use(express.static('dist/public', {
   setHeaders: (res, path) => {
     if (path.endsWith('.js') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
-      res.setHeader('Content-Type', 'text/javascript');
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
     }
   }
 }));
 
-// Add development mode handling for Vite
 if (process.env.NODE_ENV === 'development') {
   app.use(express.static('client', {
     setHeaders: (res, path) => {
       if (path.endsWith('.js') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
-        res.setHeader('Content-Type', 'text/javascript');
+        res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
       }
     }
   }));
