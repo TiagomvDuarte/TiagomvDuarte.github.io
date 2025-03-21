@@ -54,6 +54,7 @@ export default function Timeline({ items }: TimelineProps) {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
+                whileHover={{ scale: 1.05 }}
               >
                 <Card className="p-6 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">
                   <p className="text-sm text-primary font-medium mb-2">{item.date}</p>
