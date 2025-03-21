@@ -23,7 +23,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="/attached_assets/display.avif"
+          src="display.avif"
           alt="Background"
           className="w-full h-full object-cover"
         />

@@ -1,25 +1,16 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
-  Book,
   Code2,
   GraduationCap,
   Terminal,
-  Heart,
-  Users,
+  Droplet,
+  Monitor,
   User,
-  Music,
 } from "lucide-react";
+import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
 import Timeline from "@/components/shared/Timeline";
-
-const techStack = {
-  "Frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-  "Backend": ["Node.js", "Python", "PostgreSQL", "Redis"],
-  "DevOps": ["Docker", "AWS", "CI/CD", "Git"],
-  "Tools": ["VS Code", "Figma", "Postman", "Jest"],
-};
 
 const activities = [
   {
@@ -29,30 +20,37 @@ const activities = [
     description: "Twice a week"
   },
   {
-    icon: Heart,
+    icon: Droplet,
     title: "Thirst Project Portugal",
     date: "May 2024 - Present",
     description: "Member of Logistics Department - Team FCT NOVA"
   },
   {
-    icon: Users,
+    icon: Monitor,
     title: "NTT DATA",
     date: "October 2024 - Present",
     description: "University Ambassador"
   },
   {
-    icon: Users,
+    icon: User,
     title: "Magma Studio",
     date: "March 2024 - October 2024",
     description: "Ambassador"
   },
   {
-    icon: Music,
+    icon: PiGuitarFill,
     title: "Guitar Classes",
     date: "October 2015 - July 2020",
     description: "Once a week"
   }
 ];
+
+const techStack = {
+  "Frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+  "Backend": ["Node.js", "Python", "PostgreSQL", "Redis"],
+  "DevOps": ["Docker", "AWS", "CI/CD", "Git"],
+  "Tools": ["VS Code", "Figma", "Postman", "Jest"],
+};
 
 const timelineItems = [
   {
@@ -98,7 +96,7 @@ export default function About() {
           </h2>
 
           <div className="grid gap-12">
-            {/* Profile Section with Photo */}
+            {/* Profile Section */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -110,7 +108,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-6" />
                 <Card className="relative overflow-hidden rounded-2xl border-2 border-primary/20">
                   <img
-                    src="/attached_assets/Imagem WhatsApp 2025-03-21 às 17.37.44_65e6e46f.jpg"
+                    src="profile.jpg"
                     alt="Tiago Duarte"
                     className="w-full h-full object-cover"
                   />
@@ -123,7 +121,7 @@ export default function About() {
                 viewport={{ once: true }}
               >
                 <Card className="p-6 backdrop-blur-sm bg-card/80">
-                  <h3 className="text-2xl font-bold mb-4 text-foreground">WHO AM I?</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-primary">WHO AM I?</h3>
                   <p className="text-lg leading-relaxed mb-4 text-foreground">
                     I am currently 20 years old, pursuing a Bachelor's degree in Computer Science and Engineering at NOVA School of Science and Technology in Lisbon, Portugal and eagerly anticipating the opportunity to pursue a master's degree in Data Science.
                   </p>
@@ -167,9 +165,12 @@ export default function About() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+                        <span
+                          key={tech}
+                          className="px-2 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20"
+                        >
                           {tech}
-                        </Badge>
+                        </span>
                       ))}
                     </div>
                   </motion.div>
@@ -177,11 +178,10 @@ export default function About() {
               </div>
             </div>
 
-
             {/* Activities Section */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                <Book className="h-6 w-6 text-primary" />
+                <User className="h-6 w-6 text-primary" />
                 Activities & Interests
               </h3>
               <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
