@@ -46,10 +46,9 @@ const activities = [
 ];
 
 const techStack = {
-  "Frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-  "Backend": ["Node.js", "Python", "PostgreSQL", "Redis"],
-  "DevOps": ["Docker", "AWS", "CI/CD", "Git"],
-  "Tools": ["VS Code", "Figma", "Postman", "Jest"],
+  "Languages": ["Java", "OCaml", "SQL", "C", "Python", "JavaScript", "R"],
+  "AI & Data Science": ["AutoGen", "Semantic Kernel", "TensorFlow", "NumPy", "Pandas"],
+  "Tools & DevOps": ["Docker", "GitHub", "IntelliJ", "MATLAB"],
 };
 
 const timelineItems = [
