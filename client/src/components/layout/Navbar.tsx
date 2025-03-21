@@ -57,10 +57,16 @@ export default function Navbar() {
 
       <nav className="container mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
-          {/* Logo/Name */}
+          {/* Logo */}
           <Link href="/">
-            <a className={`text-2xl font-bold whitespace-nowrap ${scrolled || isOpen ? 'text-primary' : 'text-white'} transition-colors`}>
-              Tiago Duarte
+            <a className={`transition-opacity ${scrolled || isOpen ? 'opacity-100' : 'opacity-90'}`}>
+              <img 
+                src="/WebsiteLogo.png" 
+                alt="Tiago Duarte"
+                className={`h-8 transition-all duration-300 ${
+                  scrolled || isOpen ? 'brightness-50 dark:brightness-100' : 'brightness-200'
+                }`}
+              />
             </a>
           </Link>
 
@@ -70,7 +76,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`${scrolled ? 'text-foreground' : 'text-white'} hover:text-primary transition-colors`}
+                className="text-foreground hover:text-primary transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
