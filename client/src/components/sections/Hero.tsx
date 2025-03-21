@@ -29,7 +29,7 @@ export default function Hero() {
         >
           <AnimatedText
             text="Hi, I'm Tiago Duarte"
-            className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/50 text-transparent bg-clip-text"
+            className="text-4xl md:text-7xl font-bold mb-16 bg-gradient-to-r from-primary to-primary/50 text-transparent bg-clip-text"
           />
 
           <motion.p

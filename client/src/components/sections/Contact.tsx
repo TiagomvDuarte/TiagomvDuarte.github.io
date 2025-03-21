@@ -1,20 +1,10 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 
-const quotes = [
-  {
-    text: "O código é poesia em movimento",
-    author: "Anonymous"
-  },
-  {
-    text: "A simplicidade é a sofisticação suprema",
-    author: "Leonardo da Vinci"
-  },
-  {
-    text: "Inovação distingue um líder de um seguidor",
-    author: "Steve Jobs"
-  }
-];
+const quote = {
+  text: "O código é poesia em movimento",
+  author: "Anonymous"
+};
 
 export default function Quotes() {
   return (
@@ -28,25 +18,21 @@ export default function Quotes() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Citações Inspiradoras
+            Citação Inspiradora
           </h2>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {quotes.map((quote, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <Card className="p-6 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors">
-                  <p className="text-lg italic text-muted-foreground mb-4">"{quote.text}"</p>
-                  <p className="text-sm text-primary">- {quote.author}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto"
+          >
+            <Card className="p-8 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">
+              <p className="text-2xl italic text-muted-foreground mb-6">"{quote.text}"</p>
+              <p className="text-lg text-primary">- {quote.author}</p>
+            </Card>
+          </motion.div>
         </motion.div>
       </div>
     </section>
