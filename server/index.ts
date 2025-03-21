@@ -6,11 +6,20 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
-  if (req.url.endsWith('.tsx')) {
+  if (req.url.endsWith('.tsx') || req.url.endsWith('.ts') || req.url.endsWith('.jsx') || req.url.endsWith('.js')) {
     res.type('application/javascript');
   }
   next();
 });
+
+// Ensure static files are served with correct MIME types
+app.use(express.static('dist/public', {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.js') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
+      res.setHeader('Content-Type', 'application/javascript');
+    }
+  }
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();
