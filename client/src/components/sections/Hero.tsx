@@ -51,7 +51,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto"
           >
             A passionate full-stack developer crafting beautiful and functional web experiences
           </motion.p>
@@ -61,7 +61,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="flex justify-center items-center space-x-6 mb-12"
+            className="flex justify-center items-center space-x-6"
           >
             <a
               href="mailto:your.email@example.com"
@@ -92,27 +92,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Quotes Section */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="mt-12"
-          >
-            {quotes.map((quote, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 + index * 0.2 }}
-                className="mb-6"
-              >
-                <p className="text-lg italic text-muted-foreground">"{quote.text}"</p>
-                <p className="text-sm text-primary mt-1">- {quote.author}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-
+          {/* Animated Arrow */}
           <motion.div
             className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer"
             animate={{ y: [0, 10, 0] }}
@@ -127,6 +107,23 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Floating Quote */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="absolute bottom-32 right-10 max-w-md bg-card/30 backdrop-blur-sm p-6 rounded-lg border border-primary/10"
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
+          <p className="text-lg italic text-muted-foreground">"{quotes[0].text}"</p>
+          <p className="text-sm text-primary mt-2">- {quotes[0].author}</p>
+        </motion.div>
+      </motion.div>
 
       {/* Animated background shapes */}
       <motion.div
