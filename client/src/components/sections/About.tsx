@@ -72,7 +72,7 @@ const timelineItems = [
   },
   {
     date: "September 2022 - Present",
-    title: "BSc in Computer Science and Engineering",
+    title: "BSc in Computer Science and Engineering - NOVA FCT",
     description: "Average: 16.7"
   },
   {
