@@ -49,7 +49,7 @@ export default function Navbar() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <a className={`text-2xl font-bold ${scrolled ? 'text-primary' : 'text-foreground'} transition-colors`}>
+            <a className={`text-2xl font-bold ${scrolled ? 'text-primary' : 'text-white'} transition-colors`}>
               Tiago Duarte
             </a>
           </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors"
+                className={`${scrolled ? 'text-foreground' : 'text-white'} hover:text-primary transition-colors`}
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
