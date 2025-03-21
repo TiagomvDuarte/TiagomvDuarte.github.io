@@ -53,7 +53,7 @@ export default function Timeline({ items }: TimelineProps) {
                 initial={{ scale: 0.9 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
+                transition={{ duration: 0.1, delay: index * 0.2 }}
                 whileHover={{ scale: 1.05 }}
               >
                 <Card className="p-6 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">

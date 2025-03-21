@@ -70,16 +70,7 @@ export default function Navbar() {
               <img 
                 src="1-removebg-preview.png" 
                 alt="Tiago Duarte"
-                className={`h-8 transition-all duration-300 ${
-                  scrolled || isOpen 
-                    ? 'brightness-100 dark:brightness-100 filter-primary' 
-                    : 'brightness-[0.95] dark:brightness-[0.95] sepia-[0.45] saturate-[0.15] hue-rotate-[20deg]'
-                }`}
-                style={{
-                  filter: scrolled || isOpen 
-                    ? 'invert(31%) sepia(93%) saturate(1352%) hue-rotate(213deg) brightness(105%) contrast(107%)' 
-                    : 'none'
-                }}
+                className="h-8 transition-all duration-300 brightness-[1000] dark:brightness-[1000]"
               />
             </a>
           </Link>
