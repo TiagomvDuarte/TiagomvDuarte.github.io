@@ -60,19 +60,24 @@ const techStack = {
 
 const timelineItems = [
   {
+    date: "September 2025 - TBD",
+    title: "MSc in Data Science and Advanced Analytics - NOVA IMS",
+    description: "Starting master's degree studies"
+  },
+  {
+    date: "March 2025 - July 2025",
+    title: "Unipartner Curricular Internship",
+    description: "Building AI Agents"
+  },
+  {
     date: "September 2022 - Present",
     title: "BSc in Computer Science and Engineering",
     description: "Average: 16.7"
   },
   {
     date: "July 2023",
-    title: "Certificate in Advanced English",
+    title: "Cambridge Certificate in Advanced English",
     description: "Overall: 189"
-  },
-  {
-    date: "June 2022",
-    title: "First Certificate in English",
-    description: "Overall: 166"
   },
   {
     date: "September 2019 - June 2022",
