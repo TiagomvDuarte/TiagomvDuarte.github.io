@@ -8,7 +8,7 @@ import {
   Terminal,
   Heart,
   Users,
-  Laptop,
+  User,
   Music,
 } from "lucide-react";
 import { GiTennisRacket } from "react-icons/gi";
@@ -92,8 +92,9 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            WHO AM I?
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+            <User className="h-8 w-8 text-primary" />
+            ABOUT ME
           </h2>
 
           <div className="grid gap-12">
@@ -109,8 +110,8 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-6" />
                 <Card className="relative overflow-hidden rounded-2xl border-2 border-primary/20">
                   <img
-                    src="/your-photo.jpg"
-                    alt="Your Name"
+                    src="/attached_assets/Imagem WhatsApp 2025-03-21 às 17.37.44_65e6e46f.jpg"
+                    alt="Tiago Duarte"
                     className="w-full h-full object-cover"
                   />
                 </Card>
@@ -122,14 +123,14 @@ export default function About() {
                 viewport={{ once: true }}
               >
                 <Card className="p-6 backdrop-blur-sm bg-card/80">
-                  <h3 className="text-2xl font-semibold mb-4 text-primary">WHO AM I?</h3>
-                  <p className="text-lg leading-relaxed mb-4">
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">WHO AM I?</h3>
+                  <p className="text-lg leading-relaxed mb-4 text-foreground">
                     I am currently 20 years old, pursuing a Bachelor's degree in Computer Science and Engineering at NOVA School of Science and Technology in Lisbon, Portugal and eagerly anticipating the opportunity to pursue a master's degree in Data Science.
                   </p>
-                  <p className="text-lg leading-relaxed mb-4">
+                  <p className="text-lg leading-relaxed mb-4 text-foreground">
                     My interests range from technology to global and social affairs, and I am particularly interested in integrating these interests whenever possible. I have a strong passion for learning and continually expanding my knowledge in areas such as Artificial Intelligence and Data Science, exploring their profound impact on the world.
                   </p>
-                  <p className="text-lg leading-relaxed text-muted-foreground">
+                  <p className="text-lg leading-relaxed text-foreground">
                     Driven by a desire to understand the intersection of technology and society, I am committed to exploring how advancements in these fields can positively impact the world around us.
                   </p>
                 </Card>
