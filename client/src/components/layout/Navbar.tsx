@@ -9,6 +9,9 @@ import ThemeToggle from "@/components/shared/ThemeToggle";
 const navItems = [
   { href: "#hero", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#journey", label: "My Journey" },
+  { href: "#tech-stack", label: "Tech Stack" },
+  { href: "#interests", label: "Interests" },
 ];
 
 const socialLinks = [

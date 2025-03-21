@@ -42,13 +42,14 @@ const activities = [
     icon: User,
     title: "Magma Studio",
     date: "March 2024 - October 2024",
-    description: "Ambassador"
+    description: "University Ambassador"
   },
   {
     icon: Flag,
-    title: "Cambridge School Classes",
+    title: "Cambridge School",
+    subtitle: "Classes",
     date: "September 2017 - July 2023",
-    description: "4 times/week"
+    description: "4 hours/week"
   }
 ];
 
@@ -223,6 +224,7 @@ export default function About() {
                   >
                     <activity.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
                     <h4 className="font-semibold mb-2">{activity.title}</h4>
+                    {activity.subtitle && <p className="text-sm text-primary mb-1">{activity.subtitle}</p>}
                     <p className="text-sm text-primary mb-1">{activity.date}</p>
                     <p className="text-sm text-muted-foreground">
                       {activity.description}
