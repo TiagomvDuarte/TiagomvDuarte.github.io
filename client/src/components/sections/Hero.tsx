@@ -27,7 +27,7 @@ export default function Hero() {
           alt="Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-md" />
       </motion.div>
 
       <div className="container mx-auto px-6 relative z-10">
