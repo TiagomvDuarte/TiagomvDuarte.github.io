@@ -33,6 +33,12 @@ const activities = [
     description: "University Ambassador"
   },
   {
+    icon: PiGuitarFill,
+    title: "Guitar Classes",
+    date: "October 2015 - July 2020",
+    description: "Once a week"
+  },
+  {
     icon: User,
     title: "Magma Studio",
     date: "March 2024 - October 2024",
@@ -43,12 +49,6 @@ const activities = [
     title: "Cambridge School Classes",
     date: "September 2017 - July 2023",
     description: "4 times/week"
-  },
-  {
-    icon: PiGuitarFill,
-    title: "Guitar Classes",
-    date: "October 2015 - July 2020",
-    description: "Once a week"
   }
 ];
 
