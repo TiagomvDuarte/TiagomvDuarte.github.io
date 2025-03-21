@@ -7,19 +7,30 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
   if (req.url.endsWith('.tsx') || req.url.endsWith('.ts') || req.url.endsWith('.jsx') || req.url.endsWith('.js')) {
-    res.type('application/javascript');
+    res.type('text/javascript');
   }
   next();
 });
 
-// Ensure static files are served with correct MIME types
+// Configure static file serving with correct MIME types
 app.use(express.static('dist/public', {
   setHeaders: (res, path) => {
     if (path.endsWith('.js') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
-      res.setHeader('Content-Type', 'application/javascript');
+      res.setHeader('Content-Type', 'text/javascript');
     }
   }
 }));
+
+// Add development mode handling for Vite
+if (process.env.NODE_ENV === 'development') {
+  app.use(express.static('client', {
+    setHeaders: (res, path) => {
+      if (path.endsWith('.js') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
+        res.setHeader('Content-Type', 'text/javascript');
+      }
+    }
+  }));
+}
 
 app.use((req, res, next) => {
   const start = Date.now();
