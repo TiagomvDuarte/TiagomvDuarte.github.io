@@ -52,8 +52,8 @@ const activities = [
 ];
 
 const techStack = {
-  "Languages": ["Java", "OCaml", "SQL", "C", "Python", "JavaScript"],
-  "AI & Data Science": ["AutoGen", "Semantic Kernel", "TensorFlow", "NumPy", "Pandas", "Matplotlib", "R", "MATLAB"],
+  "Languages": ["Java", "Python", "SQL", "JavaScript", "C", "OCaml"],
+  "AI & Data Science": ["TensorFlow", "R", "AutoGen", "Semantic Kernel", "MATLAB", "Matplotlib", "NumPy", "Pandas"],
   "Tools & DevOps": ["Docker", "Git", "GitHub", "IntelliJ", "Maven", "Gradle", "Canva", "Oracle VM", "Ubuntu", "VS Code"],
 };
 
