@@ -7,10 +7,10 @@ import {
   Droplet,
   Monitor,
   User,
-  Flag,
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
+import UKFlagIcon from "@/components/shared/UKFlagIcon";
 import Timeline from "@/components/shared/Timeline";
 
 const activities = [
@@ -45,7 +45,7 @@ const activities = [
     description: "University Ambassador"
   },
   {
-    icon: Flag,
+    icon: UKFlagIcon,
     title: "Cambridge School",
     description: "Classes 4 hours/week",
     date: "September 2017 - July 2023"
