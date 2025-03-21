@@ -51,28 +51,29 @@ const activities = [
 
 const timelineItems = [
   {
-    date: "2022 - Present",
-    title: "Software Engineer",
-    subtitle: "Tech Company",
-    description: "Working on full-stack development with modern technologies"
+    date: "September 2022 - Present",
+    title: "BSc in Computer Science and Engineering",
+    description: "Average: 16.7"
   },
   {
-    date: "2020 - 2022",
-    title: "Master's in Computer Science",
-    subtitle: "Your University",
-    description: "Focus on Artificial Intelligence and Machine Learning"
+    date: "July 2023",
+    title: "Certificate in Advanced English",
+    description: "Overall: 189"
   },
   {
-    date: "2016 - 2020",
-    title: "Bachelor's in Software Engineering",
-    subtitle: "Your University",
-    description: "Foundation in software development and engineering principles"
+    date: "June 2022",
+    title: "First Certificate in English",
+    description: "Overall: 166"
   },
   {
-    date: "2015 - 2016",
-    title: "Web Development Internship",
-    subtitle: "Startup Company",
-    description: "First steps in professional web development"
+    date: "September 2019 - June 2022",
+    title: "High School in Science & Technology Course",
+    description: "Average: 17.7"
+  },
+  {
+    date: "September 2017 - July 2023",
+    title: "Cambridge School Classes",
+    description: "4 times/week"
   }
 ];
 
