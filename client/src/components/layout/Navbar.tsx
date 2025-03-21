@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -45,11 +45,17 @@ export default function Navbar() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      className="fixed w-full z-50"
     >
-      <nav className="container mx-auto px-6 py-4">
+      {/* Background overlay with animation */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: scrolled ? 1 : 0 }}
+        className="absolute inset-0 bg-background/80 backdrop-blur-md shadow-md"
+        transition={{ duration: 0.3 }}
+      />
+
+      <nav className="container mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
           <Link href="/">
@@ -107,51 +113,54 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden pt-4 pb-6"
-          >
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.querySelector(item.href)?.scrollIntoView({
-                      behavior: "smooth",
-                    });
-                    setIsOpen(false);
-                  }}
-                >
-                  {item.label}
-                </a>
-              ))}
-
-              {/* Mobile Social Links */}
-              <div className="flex items-center space-x-4 pt-4">
-                {socialLinks.map((link) => (
-                  <motion.a
-                    key={link.name}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-muted-foreground ${link.color} transition-all duration-300`}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.95 }}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden pt-4 pb-6"
+            >
+              <div className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.querySelector(item.href)?.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                      setIsOpen(false);
+                    }}
                   >
-                    <link.icon className="w-6 h-6" />
-                    <span className="sr-only">{link.name}</span>
-                  </motion.a>
+                    {item.label}
+                  </a>
                 ))}
+
+                {/* Mobile Social Links */}
+                <div className="flex items-center space-x-4 pt-4">
+                  {socialLinks.map((link) => (
+                    <motion.a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-muted-foreground ${link.color} transition-all duration-300`}
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <link.icon className="w-6 h-6" />
+                      <span className="sr-only">{link.name}</span>
+                    </motion.a>
+                  ))}
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </motion.header>
   );
