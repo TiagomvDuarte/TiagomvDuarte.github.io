@@ -7,10 +7,10 @@ import {
   Droplet,
   Monitor,
   User,
-  Flag
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
 import { GiTennisRacket } from "react-icons/gi";
+import { GrLanguage } from "react-icons/gr"; // UK language icon
 import Timeline from "@/components/shared/Timeline";
 
 const activities = [
@@ -45,7 +45,7 @@ const activities = [
     description: "University Ambassador"
   },
   {
-    icon: Flag,
+    icon: GrLanguage,
     title: "Cambridge School",
     subtitle: "Classes",
     date: "September 2017 - July 2023",
@@ -109,7 +109,6 @@ export default function About() {
           </h2>
 
           <div className="grid gap-12">
-            {/* Profile Section */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -148,7 +147,6 @@ export default function About() {
               </motion.div>
             </div>
 
-            {/* Quote Section - Moved here */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -162,8 +160,7 @@ export default function About() {
               </Card>
             </motion.div>
 
-            {/* Timeline Section */}
-            <div>
+            <div id="journey" className="mt-20">
               <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2 justify-center">
                 <GraduationCap className="h-6 w-6 text-primary" />
                 My Journey
@@ -171,8 +168,7 @@ export default function About() {
               <Timeline items={timelineItems} />
             </div>
 
-            {/* Tech Stack Section */}
-            <div>
+            <div id="tech-stack" className="mt-20">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <Code2 className="h-6 w-6 text-primary" />
                 Tech Stack
@@ -205,8 +201,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Activities Section */}
-            <div>
+            <div id="interests" className="mt-20">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <User className="h-6 w-6 text-primary" />
                 Activities & Interests
