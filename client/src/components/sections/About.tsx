@@ -147,7 +147,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="max-w-3xl mx-auto"
             >
-              <Card className="p-8 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-colors text-center">
+              <Card className="p-8 backdrop-blur-sm bg-card/90 hover:bg-card/100 transition-colors text-center">
                 <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
                 <p className="text-lg text-primary">- {quote.author}</p>
               </Card>
@@ -168,14 +168,14 @@ export default function About() {
                 <Code2 className="h-6 w-6 text-primary" />
                 Tech Stack
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Object.entries(techStack).map(([category, technologies]) => (
                   <motion.div
                     key={category}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card/80 backdrop-blur-sm"
+                    className="p-6 rounded-lg bg-card/90 backdrop-blur-sm hover:bg-card transition-colors"
                   >
                     <h4 className="font-medium text-lg flex items-center gap-2 mb-4">
                       <Terminal className="h-4 w-4 text-primary" />
@@ -209,7 +209,7 @@ export default function About() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card/80 backdrop-blur-sm text-center"
+                    className="p-6 rounded-lg bg-card/90 backdrop-blur-sm hover:bg-card transition-colors text-center"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
