@@ -46,9 +46,9 @@ const activities = [
 ];
 
 const techStack = {
-  "Languages": ["Java", "OCaml", "SQL", "C", "Python", "JavaScript", "R"],
-  "AI & Data Science": ["AutoGen", "Semantic Kernel", "TensorFlow", "NumPy", "Pandas"],
-  "Tools & DevOps": ["Docker", "GitHub", "IntelliJ", "MATLAB"],
+  "Languages": ["Java", "OCaml", "SQL", "C", "Python", "JavaScript"],
+  "AI & Data Science": ["AutoGen", "Semantic Kernel", "TensorFlow", "NumPy", "Pandas", "R", "MATLAB"],
+  "Tools & DevOps": ["Docker", "GitHub", "IntelliJ"],
 };
 
 const timelineItems = [
