@@ -65,28 +65,32 @@ export default function Navbar() {
       <nav className="container mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div>
-            <img 
-              src="1-removebg-preview.png" 
-              alt="Tiago Duarte"
-              className="h-8 brightness-[1000]"
-            />
-          </div>
+          <Link href="/">
+            <a className={`transition-opacity ${scrolled || isOpen ? 'opacity-100' : 'opacity-90'}`}>
+              <img 
+                src="1-removebg-preview.png" 
+                alt="Tiago Duarte"
+                className="h-8 transition-all duration-300 brightness-[1000] dark:brightness-[1000]"
+              />
+            </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.href}
+                href={item.href}
                 className="text-foreground hover:text-primary transition-colors"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
                     behavior: "smooth",
                   });
                 }}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
 
             {/* Theme Toggle + Social Links */}
@@ -134,10 +138,12 @@ export default function Navbar() {
             >
               <div className="flex flex-col space-y-4">
                 {navItems.map((item) => (
-                  <button
+                  <a
                     key={item.href}
-                    className="text-foreground hover:text-primary transition-colors text-left"
-                    onClick={() => {
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
                       document.querySelector(item.href)?.scrollIntoView({
                         behavior: "smooth",
                       });
@@ -145,7 +151,7 @@ export default function Navbar() {
                     }}
                   >
                     {item.label}
-                  </button>
+                  </a>
                 ))}
 
                 {/* Mobile Social Links */}

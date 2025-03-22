@@ -6,35 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Configure static file serving for production
-app.use(express.static('dist'));
-app.use(express.static('public'));
-
-// Development mode static file serving
-if (process.env.NODE_ENV === 'development') {
-  app.use(express.static('client'));
-  app.use(express.static('client/public'));
-  app.use(express.static('client/dist'));
-}
-
-// Set MIME types for JavaScript modules
-app.use((req, res, next) => {
-  if (req.url.match(/\.(js|mjs|jsx|ts|tsx)$/)) {
-    res.type('text/javascript');
-  }
-  next();
-});
-
-if (process.env.NODE_ENV === 'development') {
-  app.use(express.static('client', {
-    setHeaders: (res, path) => {
-      if (path.endsWith('.js') || path.endsWith('.ts') || path.endsWith('.tsx') || path.endsWith('.jsx')) {
-        res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
-      }
-    }
-  }));
-}
-
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;

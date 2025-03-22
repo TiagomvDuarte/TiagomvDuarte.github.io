@@ -190,7 +190,7 @@ const About = () => {
                       <Terminal className="h-4 w-4 text-primary" />
                       {category}
                     </h4>
-                    <div className="flex flex-wrap justify-center gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {technologies.map((tech) => (
                         <span
                           key={tech}
