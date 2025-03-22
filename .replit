@@ -7,16 +7,15 @@ channel = "stable-24_05"
 
 [deployment]
 deploymentTarget = "static"
-build = ["sh", "-c", "npm run build"]
+build = ["npm", "run", "build"]
 publicDir = "dist"
-run = ["sh", "-c", "npm run start"]
 
 [[ports]]
 localPort = 5000
 externalPort = 80
 
 [workflows]
-runButton = "Start Dev"
+runButton = "Project"
 
 [[workflows.workflow]]
 name = "Project"
@@ -41,12 +40,3 @@ task = "packager.installForAll"
 task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
-
-[[workflows.workflow]]
-name = "Start Dev"
-author = 27012636
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "npm run dev"
