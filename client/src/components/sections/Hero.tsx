@@ -57,7 +57,7 @@ export default function Hero() {
             className="flex justify-center items-center space-x-6"
           >
             <a
-              href="https://www.linkedin.com/in/tiagomvduarte/"
+              href="https://www.linkedin.com/in/tiago-duarte-628278263/"
               className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"

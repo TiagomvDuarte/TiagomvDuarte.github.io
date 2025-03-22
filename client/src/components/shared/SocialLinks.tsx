@@ -5,7 +5,7 @@ import { HiMail } from "react-icons/hi";
 const socialLinks = [
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/tiagomvduarte/",
+    url: "https://www.linkedin.com/in/tiago-duarte-628278263/",
     icon: FaLinkedin,
     color: "hover:text-[#0077B5]",
   },
