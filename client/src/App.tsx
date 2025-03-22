@@ -17,9 +17,10 @@ function Router() {
 
 function App() {
   useEffect(() => {
-    // Check system preference
+    // Check system preference and initialize theme
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.classList.toggle("dark", prefersDark);
+    const theme = localStorage.getItem("theme") || (prefersDark ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", theme === "dark");
   }, []);
 
   return (
