@@ -207,7 +207,7 @@ const About = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors"
+                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors duration-200"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -242,7 +242,7 @@ const About = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors text-center"
+                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors duration-200"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
