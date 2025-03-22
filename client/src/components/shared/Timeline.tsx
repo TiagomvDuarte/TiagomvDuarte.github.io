@@ -16,7 +16,7 @@ export default function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative">
       {/* Vertical line */}
-      <div className="absolute left-[16px] md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20" />
+      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20" />
 
       <div className="space-y-16">
         {items.map((item, index) => (
@@ -31,7 +31,7 @@ export default function Timeline({ items }: TimelineProps) {
             }`}
           >
             {/* Dot on timeline */}
-            <div className="absolute left-0 md:left-1/2 w-8 h-8 -translate-x-[14px] md:-translate-x-1/2 top-1/2 -translate-y-1/2">
+            <div className="absolute left-4 md:left-1/2 w-8 h-8 -translate-x-1/2 top-1/2 -translate-y-1/2">
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -45,7 +45,7 @@ export default function Timeline({ items }: TimelineProps) {
 
             {/* Content */}
             <div
-              className={`pl-12 md:pl-0 ${
+              className={`pl-16 md:pl-0 ${
                 index % 2 === 0 ? "md:w-[calc(50%-2rem)]" : "md:w-[calc(50%-2rem)]"
               }`}
             >
