@@ -7,8 +7,10 @@ import Home from "@/pages/Home";
 import { useEffect } from "react";
 
 function Router() {
+  const base = document.documentElement.dataset.base || '/';
+
   return (
-    <Switch>
+    <Switch base={base}>
       <Route path="/" component={Home} />
       <Route path="/TiagomvDuarte.github.io" component={Home} />
       <Route path="/TiagomvDuarte.github.io/*" component={Home} />
