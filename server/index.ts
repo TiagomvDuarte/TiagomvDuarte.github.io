@@ -51,9 +51,11 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    // Serve static files
-    app.use(express.static(path.join(__dirname, "public"), {
-      index: false // Don't serve index.html for every route
+    // Serve static files - Important to place this before the catch-all route
+    app.use("/", express.static(path.join(__dirname, "public"), {
+      index: false, // Don't serve index.html for every route
+      maxAge: '1y', // Add cache headers for static assets
+      etag: true
     }));
 
     // Handle client-side routing - always serve index.html for non-API routes
