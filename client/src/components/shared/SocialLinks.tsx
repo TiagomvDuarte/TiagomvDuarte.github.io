@@ -56,9 +56,10 @@ export default function SocialLinks() {
         <motion.button
           key={link.name}
           onClick={() => handleSocialClick(link)}
-          className={`text-muted-foreground ${link.color} transition-all duration-300`}
+          className={`text-muted-foreground ${link.color} transition-all duration-200`}
           whileHover={{ scale: 1.2, rotate: 5 }}
           whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
         >
           <link.icon className="w-6 h-6" />
           <span className="sr-only">{link.name}</span>

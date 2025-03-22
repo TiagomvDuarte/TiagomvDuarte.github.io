@@ -136,7 +136,7 @@ const About = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                   className="relative aspect-square max-w-md mx-auto"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl -rotate-6" />
@@ -177,7 +177,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.2 }}
               className="max-w-3xl mx-auto"
               whileHover={{ scale: 1.05 }}
             >

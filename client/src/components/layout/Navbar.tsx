@@ -134,7 +134,7 @@ export default function Navbar() {
                     scrolled || isOpen
                       ? 'text-muted-foreground'
                       : 'text-white/60'
-                  } ${link.color} transition-all duration-300`}
+                  } ${link.color} transition-all duration-200`}
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -198,7 +198,7 @@ export default function Navbar() {
                         scrolled || isOpen
                           ? 'text-muted-foreground'
                           : 'text-white/60'
-                      } ${link.color} transition-all duration-300`}
+                      } ${link.color} transition-all duration-200`}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.95 }}
                     >
