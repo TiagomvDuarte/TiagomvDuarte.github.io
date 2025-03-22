@@ -57,13 +57,13 @@ export default function Hero() {
             className="flex justify-center items-center space-x-6"
           >
             <a
-              href="mailto:tiagomvduarte24@gmail.com"
-              className="text-white/60 hover:text-primary transition-colors duration-300"
+              href="https://www.linkedin.com/in/tiagomvduarte/"
+              className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <HiMail className="w-6 h-6" />
-              <span className="sr-only">Email</span>
+              <FaLinkedin className="w-6 h-6" />
+              <span className="sr-only">LinkedIn</span>
             </a>
             <a
               href="https://github.com/TiagomvDuarte"
@@ -75,13 +75,13 @@ export default function Hero() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/tiagomvduarte/"
-              className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
+              href="mailto:tiagomvduarte24@gmail.com"
+              className="text-white/60 hover:text-primary transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="w-6 h-6" />
-              <span className="sr-only">LinkedIn</span>
+              <HiMail className="w-6 h-6" />
+              <span className="sr-only">Email</span>
             </a>
           </motion.div>
 

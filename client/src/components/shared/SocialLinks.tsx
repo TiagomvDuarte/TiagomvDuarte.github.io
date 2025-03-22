@@ -4,15 +4,15 @@ import { HiMail } from "react-icons/hi";
 
 const socialLinks = [
   {
-    name: "GitHub",
-    url: "https://github.com/TiagomvDuarte",
-    icon: FaGithub,
-    color: "hover:text-[#0077B5]",
-  },
-  {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/tiagomvduarte/",
     icon: FaLinkedin,
+    color: "hover:text-[#0077B5]",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/TiagomvDuarte",
+    icon: FaGithub,
     color: "hover:text-[#0077B5]",
   },
   {
