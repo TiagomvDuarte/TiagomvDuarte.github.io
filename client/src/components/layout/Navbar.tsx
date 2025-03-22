@@ -94,10 +94,10 @@ export default function Navbar() {
               <img
                 src="/1-removebg-preview.png"
                 alt="Tiago Duarte"
-                className={`h-8 transition-all duration-300 ${
+                className={`h-12 w-12 transition-all duration-300 ${
                   scrolled || isOpen
-                    ? 'dark:brightness-[1000] brightness-0'
-                    : 'brightness-[1000] dark:brightness-[1000]'
+                    ? 'brightness-100 dark:brightness-100'
+                    : 'brightness-0 invert dark:brightness-100'
                 }`}
               />
             </a>
