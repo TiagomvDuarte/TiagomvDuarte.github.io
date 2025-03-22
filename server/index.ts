@@ -58,6 +58,13 @@ app.use((req, res, next) => {
       etag: true
     }));
 
+    // Also serve static files from the potentially incorrect path
+    app.use("/TiagomvDuarte.github.io", express.static(path.join(__dirname, "public"), {
+      index: false,
+      maxAge: '1y',
+      etag: true
+    }));
+
     // Handle client-side routing - always serve index.html for non-API routes
     app.get("*", (req, res) => {
       if (!req.path.startsWith("/api")) {
