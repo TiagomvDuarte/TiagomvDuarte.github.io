@@ -58,12 +58,6 @@ app.use((req, res, next) => {
       etag: true
     }));
 
-    // Explicitly serve assets from both paths
-    app.use(["/assets", "/TiagomvDuarte.github.io/assets"], express.static(path.join(__dirname, "public", "assets"), {
-      maxAge: '1y',
-      etag: true
-    }));
-
     // Handle all other routes by serving index.html
     app.get("*", (req, res) => {
       if (!req.path.startsWith("/api")) {

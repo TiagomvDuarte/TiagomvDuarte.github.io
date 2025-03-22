@@ -10,7 +10,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/assets/*" component={Home} />
       <Route component={NotFound} />
     </Switch>
   );
