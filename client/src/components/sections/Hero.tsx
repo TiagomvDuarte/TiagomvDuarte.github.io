@@ -2,7 +2,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import AnimatedText from "@/components/shared/AnimatedText";
 import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
-import { SiReplit } from "react-icons/si";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 
@@ -58,8 +57,17 @@ export default function Hero() {
             className="flex justify-center items-center space-x-6"
           >
             <a
+              href="mailto:tiagomvduarte24@gmail.com"
+              className="text-white/60 hover:text-primary transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <HiMail className="w-6 h-6" />
+              <span className="sr-only">Email</span>
+            </a>
+            <a
               href="https://github.com/TiagomvDuarte"
-              className="text-white/60 hover:text-[#2ea44f] transition-colors duration-300"
+              className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -74,15 +82,6 @@ export default function Hero() {
             >
               <FaLinkedin className="w-6 h-6" />
               <span className="sr-only">LinkedIn</span>
-            </a>
-            <a
-              href="mailto:tiagomvduarte24@gmail.com"
-              className="text-white/60 hover:text-primary transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <HiMail className="w-6 h-6" />
-              <span className="sr-only">Email</span>
             </a>
           </motion.div>
 

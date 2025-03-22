@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
@@ -8,7 +7,7 @@ const socialLinks = [
     name: "GitHub",
     url: "https://github.com/TiagomvDuarte",
     icon: FaGithub,
-    color: "hover:text-[#2ea44f]",
+    color: "hover:text-[#0077B5]",
   },
   {
     name: "LinkedIn",
