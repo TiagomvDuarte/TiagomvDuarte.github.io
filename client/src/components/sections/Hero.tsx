@@ -4,9 +4,13 @@ import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
+import { useToast } from "@/hooks/use-toast";
+
+const email = "tiagomvduarte24@gmail.com";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -14,6 +18,20 @@ export default function Hero() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  const handleEmailClick = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      toast({
+        description: "Email copied to clipboard!",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        description: "Failed to copy email",
+      });
+    }
+  };
 
   return (
     <section ref={ref} id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -75,15 +93,13 @@ export default function Hero() {
                 <FaGithub className="w-6 h-6" />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a
-                href="mailto:tiagomvduarte24@gmail.com"
+              <button
+                onClick={handleEmailClick}
                 className="text-white/60 hover:text-primary transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <HiMail className="w-6 h-6" />
                 <span className="sr-only">Email</span>
-              </a>
+              </button>
             </motion.div>
 
             <motion.div
