@@ -143,7 +143,7 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-6" />
                   <Card className="relative overflow-hidden rounded-2xl border-2 border-primary/20">
                     <img
-                      src="profile.jpg"
+                      src="/profile.jpg"
                       alt="Tiago Duarte"
                       className="w-full h-full object-cover"
                     />

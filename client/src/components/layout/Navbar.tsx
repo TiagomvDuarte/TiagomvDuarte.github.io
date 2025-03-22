@@ -70,7 +70,7 @@ export default function Navbar() {
           <Link href="/">
             <a className={`transition-opacity ${scrolled || isOpen ? 'opacity-100' : 'opacity-90'}`}>
               <img 
-                src="1-removebg-preview.png" 
+                src="/1-removebg-preview.png"  
                 alt="Tiago Duarte"
                 className={`h-8 transition-all duration-300 ${
                   scrolled || isOpen 
