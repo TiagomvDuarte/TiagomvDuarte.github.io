@@ -64,6 +64,12 @@ app.use((req, res, next) => {
       etag: true
     }));
 
+    // Serve assets for GitHub Pages path as well
+    app.use("/TiagomvDuarte.github.io/assets", express.static(path.join(__dirname, "public", "assets"), {
+      maxAge: '1y',
+      etag: true
+    }));
+
     // Handle client-side routing - always serve index.html for non-API routes
     app.get("*", (req, res) => {
       if (!req.path.startsWith("/api")) {
