@@ -7,19 +7,11 @@ import Home from "@/pages/Home";
 import { useEffect } from "react";
 
 function Router() {
-  const base = document.documentElement.dataset.base || '/';
+  const base = '/';
 
   return (
     <Switch base={base}>
       <Route path="/" component={Home} />
-      {/* Only include GitHub Pages routes if not on Replit */}
-      {!window.location.hostname.includes('replit.app') && (
-        <>
-          <Route path="/TiagomvDuarte.github.io" component={Home} />
-          <Route path="/TiagomvDuarte.github.io/*" component={Home} />
-        </>
-      )}
-      <Route path="/assets/*" component={Home} />
       <Route component={NotFound} />
     </Switch>
   );
