@@ -27,7 +27,7 @@ const socialLinks = [
     name: "GitHub",
     url: "https://github.com/TiagomvDuarte",
     icon: FaGithub,
-    color: "hover:text-[#2ea44f]",
+    color: "hover:text-[#0077B5]", // Changed to blue color
   },
   {
     name: "LinkedIn",
