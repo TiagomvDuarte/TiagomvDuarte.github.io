@@ -102,7 +102,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center gap-2 pt-16">
+          <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
             <User className="h-8 w-8 text-primary" />
             ABOUT ME
           </h2>
@@ -166,16 +166,16 @@ const About = () => {
             </motion.div>
 
             <div id="journey" className="scroll-mt-32">
-              <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2 justify-center">
-                <GraduationCap className="h-6 w-6 text-primary" />
+              <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+                <GraduationCap className="h-8 w-8 text-primary" />
                 My Journey
               </h3>
               <Timeline items={timelineItems} />
             </div>
 
             <div id="tech-stack" className="scroll-mt-32">
-              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                <Code2 className="h-6 w-6 text-primary" />
+              <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+                <Code2 className="h-8 w-8 text-primary" />
                 Tech Stack
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -209,8 +209,8 @@ const About = () => {
             </div>
 
             <div id="activities" className="scroll-mt-32">
-              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                <FolderKanban className="h-6 w-6 text-primary" />
+              <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+                <FolderKanban className="h-8 w-8 text-primary" />
                 Activities
               </h3>
               <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
