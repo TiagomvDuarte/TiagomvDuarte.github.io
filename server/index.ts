@@ -62,7 +62,7 @@ app.use((req, res, next) => {
       etag: true
     }));
 
-    // Handle all other routes by serving index.html
+    // Serve index.html for all non-api routes
     app.get("*", (req, res) => {
       if (!req.path.startsWith("/api")) {
         res.sendFile(join(__dirname, "public", "index.html"));
