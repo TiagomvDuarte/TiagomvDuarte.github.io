@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SiReplit } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import { FaLinkedin } from "react-icons/fa"; // Added import for FaLinkedin
+import { FaLinkedin } from "react-icons/fa";
 import ThemeToggle from "@/components/shared/ThemeToggle";
 
 const navItems = [
@@ -24,10 +24,10 @@ const socialLinks = [
     color: "hover:text-primary",
   },
   {
-    name: "Replit",
-    url: "https://replit.com/@TiagomiguelDuar",
-    icon: SiReplit,
-    color: "hover:text-[#F26207]",
+    name: "GitHub",
+    url: "https://github.com/TiagomvDuarte",
+    icon: FaGithub,
+    color: "hover:text-[#2ea44f]",
   },
   {
     name: "LinkedIn",
