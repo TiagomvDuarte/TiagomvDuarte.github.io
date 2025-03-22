@@ -11,6 +11,22 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Middleware to handle HTML content and rewrite asset paths
+app.use((req, res, next) => {
+  const originalSend = res.send;
+  res.send = function (body) {
+    if (typeof body === 'string' && body.includes('TiagomvDuarte.github.io')) {
+      // Remove GitHub Pages paths from asset URLs
+      body = body.replace(/\/TiagomvDuarte\.github\.io\/assets\//g, '/assets/');
+      body = body.replace(/crossorigin src="\/TiagomvDuarte\.github\.io/g, 'crossorigin src="');
+      body = body.replace(/crossorigin href="\/TiagomvDuarte\.github\.io/g, 'crossorigin href="');
+    }
+    return originalSend.call(this, body);
+  };
+  next();
+});
+
+// Logging middleware
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -29,15 +45,12 @@ app.use((req, res, next) => {
       if (capturedJsonResponse) {
         logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
       }
-
       if (logLine.length > 80) {
         logLine = logLine.slice(0, 79) + "…";
       }
-
       log(logLine);
     }
   });
-
   next();
 });
 
@@ -54,24 +67,25 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    // Serve static files with proper caching
+    // Serve static files with proper MIME types and caching
     app.use(express.static(join(__dirname, "public"), {
       index: false,
       maxAge: '1y',
       etag: true,
       setHeaders: (res, path) => {
-        // Ensure CSS and JS files are properly served
-        if (path.endsWith('.css') || path.endsWith('.js')) {
-          res.setHeader('Content-Type', path.endsWith('.css') ? 'text/css' : 'application/javascript');
+        if (path.endsWith('.css')) {
+          res.setHeader('Content-Type', 'text/css');
+        } else if (path.endsWith('.js')) {
+          res.setHeader('Content-Type', 'application/javascript');
+        } else if (path.endsWith('.ico')) {
+          res.setHeader('Content-Type', 'image/x-icon');
         }
       }
     }));
 
-    // Serve index.html for all non-api routes
-    app.get("*", (req, res) => {
-      if (!req.path.startsWith("/api")) {
-        res.sendFile(join(__dirname, "public", "index.html"));
-      }
+    // fall through to index.html if the file doesn't exist
+    app.use("*", (_req, res) => {
+      res.sendFile(join(__dirname, "public", "index.html"));
     });
   }
 
