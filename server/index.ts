@@ -1,7 +1,11 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
-import path from "path";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 app.use(express.json());
@@ -48,23 +52,22 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // Serve static files unconditionally
-  app.use(express.static(path.join(__dirname, "public"), {
-    index: false,
-    maxAge: '1y',
-    etag: true
-  }));
-
-  // Handle all other routes by serving index.html
-  app.get("*", (req, res) => {
-    if (!req.path.startsWith("/api")) {
-      res.sendFile(path.join(__dirname, "public", "index.html"));
-    }
-  });
-
-
   if (app.get("env") === "development") {
     await setupVite(app, server);
+  } else {
+    // Serve static files
+    app.use(express.static(join(__dirname, "public"), {
+      index: false,
+      maxAge: '1y',
+      etag: true
+    }));
+
+    // Handle all other routes by serving index.html
+    app.get("*", (req, res) => {
+      if (!req.path.startsWith("/api")) {
+        res.sendFile(join(__dirname, "public", "index.html"));
+      }
+    });
   }
 
   const port = 5000;
