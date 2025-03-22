@@ -29,7 +29,7 @@ const resources = {
 
 export default function Projects() {
   return (
-    <section id="files" className="py-20">
+    <section id="files" className="py-12 bg-muted/10">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
