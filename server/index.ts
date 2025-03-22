@@ -16,8 +16,10 @@ app.use((req, res, next) => {
   const originalSend = res.send;
   res.send = function (body) {
     if (typeof body === 'string' && body.includes('TiagomvDuarte.github.io')) {
-      // Remove GitHub Pages paths from asset URLs
+      // Clean up any GitHub Pages references
       body = body.replace(/\/TiagomvDuarte\.github\.io\/assets\//g, '/assets/');
+      body = body.replace(/src="\/TiagomvDuarte\.github\.io/g, 'src="');
+      body = body.replace(/href="\/TiagomvDuarte\.github\.io/g, 'href="');
       body = body.replace(/crossorigin src="\/TiagomvDuarte\.github\.io/g, 'crossorigin src="');
       body = body.replace(/crossorigin href="\/TiagomvDuarte\.github\.io/g, 'crossorigin href="');
     }
