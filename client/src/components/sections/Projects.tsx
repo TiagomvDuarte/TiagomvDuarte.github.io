@@ -50,6 +50,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+                whileHover={{ scale: 1.05 }}
               >
                 <Card className="p-6 backdrop-blur-sm bg-card/80 hover:bg-card/100 transition-all duration-300">
                   <h3 className="text-xl font-semibold mb-4">{category}</h3>
