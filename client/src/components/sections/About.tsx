@@ -242,14 +242,14 @@ const About = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors duration-200"
+                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors duration-200 text-center"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
                     <activity.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
-                    <h4 className="font-semibold mb-2">{activity.title}</h4>
-                    <p className="text-sm text-primary mb-1">{activity.date}</p>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold mb-2 text-center">{activity.title}</h4>
+                    <p className="text-sm text-primary mb-1 text-center">{activity.date}</p>
+                    <p className="text-sm text-muted-foreground text-center">
                       {activity.description}
                     </p>
                   </motion.div>
