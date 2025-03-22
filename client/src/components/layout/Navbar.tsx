@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { FaLinkedin } from "react-icons/fa";
+import { useToast } from "@/hooks/use-toast";
 import ThemeToggle from "@/components/shared/ThemeToggle";
 
 const navItems = [
@@ -15,6 +16,8 @@ const navItems = [
   { href: "#tech-stack", label: "Tech Stack" },
   { href: "#activities", label: "Activities" },
 ];
+
+const email = "tiagomvduarte24@gmail.com";
 
 const socialLinks = [
   {
@@ -31,7 +34,10 @@ const socialLinks = [
   },
   {
     name: "Email",
-    url: "mailto:tiagomvduarte24@gmail.com",
+    action: async () => {
+      await navigator.clipboard.writeText(email);
+      return "Email copied to clipboard!";
+    },
     icon: HiMail,
     color: "hover:text-primary",
   },
@@ -40,6 +46,7 @@ const socialLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +55,24 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleSocialClick = async (link: typeof socialLinks[0]) => {
+    if ('url' in link) {
+      window.open(link.url, '_blank');
+    } else if ('action' in link) {
+      try {
+        const message = await link.action();
+        toast({
+          description: message,
+        });
+      } catch (error) {
+        toast({
+          variant: "destructive",
+          description: "Failed to copy email",
+        });
+      }
+    }
+  };
 
   return (
     <motion.header
@@ -102,11 +127,9 @@ export default function Navbar() {
             <div className="flex items-center space-x-4">
               <ThemeToggle isTransparent={!scrolled && !isOpen} />
               {socialLinks.map((link) => (
-                <motion.a
+                <motion.button
                   key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => handleSocialClick(link)}
                   className={`${
                     scrolled || isOpen
                       ? 'text-muted-foreground'
@@ -117,7 +140,7 @@ export default function Navbar() {
                 >
                   <link.icon className="w-6 h-6" />
                   <span className="sr-only">{link.name}</span>
-                </motion.a>
+                </motion.button>
               ))}
             </div>
           </div>
@@ -168,11 +191,9 @@ export default function Navbar() {
 
                 <div className="flex items-center space-x-4 pt-4">
                   {socialLinks.map((link) => (
-                    <motion.a
+                    <motion.button
                       key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      onClick={() => handleSocialClick(link)}
                       className={`${
                         scrolled || isOpen
                           ? 'text-muted-foreground'
@@ -183,7 +204,7 @@ export default function Navbar() {
                     >
                       <link.icon className="w-6 h-6" />
                       <span className="sr-only">{link.name}</span>
-                    </motion.a>
+                    </motion.button>
                   ))}
                 </div>
               </div>

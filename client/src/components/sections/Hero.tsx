@@ -50,53 +50,55 @@ export default function Hero() {
             I'm a Computer Science student and a tech enthusiast
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="flex justify-center items-center space-x-6"
-          >
-            <a
-              href="https://www.linkedin.com/in/tiago-duarte-628278263/"
-              className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="flex flex-col items-center gap-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="flex justify-center items-center space-x-6"
             >
-              <FaLinkedin className="w-6 h-6" />
-              <span className="sr-only">LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/TiagomvDuarte"
-              className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="w-6 h-6" />
-              <span className="sr-only">GitHub</span>
-            </a>
-            <a
-              href="mailto:tiagomvduarte24@gmail.com"
-              className="text-white/60 hover:text-primary transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <HiMail className="w-6 h-6" />
-              <span className="sr-only">Email</span>
-            </a>
-          </motion.div>
+              <a
+                href="https://www.linkedin.com/in/tiago-duarte-628278263/"
+                className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="w-6 h-6" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/TiagomvDuarte"
+                className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="w-6 h-6" />
+                <span className="sr-only">GitHub</span>
+              </a>
+              <a
+                href="mailto:tiagomvduarte24@gmail.com"
+                className="text-white/60 hover:text-primary transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <HiMail className="w-6 h-6" />
+                <span className="sr-only">Email</span>
+              </a>
+            </motion.div>
 
-          <motion.div
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            onClick={() => {
-              document.querySelector("#about")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            <ArrowDown className="w-8 h-8 text-white/60" />
-          </motion.div>
+            <motion.div
+              className="cursor-pointer"
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              onClick={() => {
+                document.querySelector("#about")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              <ArrowDown className="w-8 h-8 text-white/60" />
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
