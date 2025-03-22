@@ -65,11 +65,11 @@ export default function Navbar() {
       <nav className="container mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className={`transition-opacity ${scrolled || isOpen ? 'opacity-100' : 'opacity-90'}`}>
+          <div>
             <img 
               src="1-removebg-preview.png" 
               alt="Tiago Duarte"
-              className="h-8 transition-all duration-300 brightness-[1000] dark:brightness-[1000]"
+              className="h-8 brightness-[1000]"
             />
           </div>
 
