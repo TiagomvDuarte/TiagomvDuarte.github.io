@@ -1,0 +1,29 @@
+Explanation
+
+Understanding the problem
+The error message GET ... net::ERR_ABORTED 404 (Not Found) indicates that the web browser attempted to retrieve a JavaScript file (index-CNgg4MaJ.js) from the server but failed because the server responded with a 404 Not Found status code. The browser then aborted the request. This means the requested resource (index-CNgg4MaJ.js) does not exist at the specified path (/TiagomvDuarte.github.io/assets/) on the server. This will break the web application/site because the JavaScript file may contain essential application logic.
+
+How to verify
+Check File Existence: Manually navigate to the supposed location of the file on the server (e.g., by entering the URL in the browser's address bar). If you receive a 404 error, it confirms that the file is missing.
+Inspect Network Tab: Using the Chrome DevTools, go to the 'Network' tab, reload the page, and check the request for index-CNgg4MaJ.js. The status code will be 404, confirming the issue.
+Inspect HTML Source: Inspect the HTML source code of the page that loads the web application. Check if there is a <script> tag which is trying to load the missing JavaScript resource.
+Suggested fix
+Verify File Path: Ensure that the path to the JavaScript file in your HTML or in your application's configuration is correct. Double-check for any typos or incorrect directory structures.
+Check for file existence: Verify that the index-CNgg4MaJ.js file actually exists in the /TiagomvDuarte.github.io/assets/ folder on your server. If the file is missing, make sure to upload it to the server.
+Build process: If the application uses a build process (like Vite or Webpack), ensure the build is creating the Javascript files on the correct folder.
+Deployment: If the application was recently deployed, verify that the new version was correctly published to the server.
+The file is most likely being loaded via a <script> tag in an HTML file. Correcting the <script> tag to correctly point to the file should resolve the issue:
+
+Code
+
+<!-- Original, most likely incorrect, script tag -->
+<script src="/TiagomvDuarte.github.io/assets/index-CNgg4MaJ.js"></script>
+
+<!-- Corrected script tag -->
+<script src="/assets/index-CNgg4MaJ.js"></script>
+Use code snippets with caution
+
+Summary
+The net::ERR_ABORTED 404 (Not Found) error indicates that a JavaScript file could not be found on the server. The file index-CNgg4MaJ.js is missing from the expected location, /TiagomvDuarte.github.io/assets/ in this case. Make sure the file exists and that it can be accessed from the location pointed to in the <script> tag. Verify the correctness of the file path and the deployment process if this is a recent update.
+
+Data used to understand this message
