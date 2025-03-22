@@ -36,6 +36,7 @@ function moveFilesToDist() {
   files.forEach(file => {
     const srcPath = join(publicDir, file);
     const destPath = join(distDir, file);
+    console.log(`Copying ${srcPath} to ${destPath}`);
     copyRecursive(srcPath, destPath);
   });
 
