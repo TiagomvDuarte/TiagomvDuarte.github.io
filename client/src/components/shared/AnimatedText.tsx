@@ -6,13 +6,14 @@ interface AnimatedTextProps {
 }
 
 export default function AnimatedText({ text, className = "" }: AnimatedTextProps) {
-  const letters = text.split("");
+  // Split text by words instead of letters
+  const words = text.split(" ");
 
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.1, delayChildren: 0.04 * i },
     }),
   };
 
@@ -39,19 +40,19 @@ export default function AnimatedText({ text, className = "" }: AnimatedTextProps
 
   return (
     <motion.div
-      className={className}
+      className={`${className} whitespace-pre-wrap`}
       variants={container}
       initial="hidden"
       animate="visible"
     >
-      {letters.map((letter, index) => (
+      {words.map((word, index) => (
         <motion.span
           key={index}
-          className="inline-block"
+          className="inline-block whitespace-nowrap"
           variants={child}
-          style={{ marginRight: letter === " " ? "0.5em" : "0.02em" }}
+          style={{ marginRight: '0.25em' }}
         >
-          {letter}
+          {word}
         </motion.span>
       ))}
     </motion.div>

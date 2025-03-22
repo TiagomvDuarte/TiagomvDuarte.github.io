@@ -26,12 +26,12 @@ export default function Timeline({ items }: TimelineProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.2 }}
-            className={`relative flex items-start gap-8 ${
+            className={`relative flex items-center md:items-start gap-8 ${
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             }`}
           >
             {/* Dot on timeline */}
-            <div className="absolute left-0 md:left-1/2 w-8 h-8 -translate-x-[14px] md:-translate-x-1/2 mt-1.5">
+            <div className="absolute left-0 md:left-1/2 w-8 h-8 -translate-x-[14px] md:-translate-x-1/2 top-1/2 -translate-y-1/2 md:top-6">
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
