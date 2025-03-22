@@ -7,20 +7,20 @@ const resources = {
   "Research Papers": [
     {
       title: "Paper on AI Implementation",
-      link: "path/to/paper.pdf",
+      link: "/papers/ai-implementation.pdf",
       description: "Research on modern AI techniques",
     },
   ],
   "Course Materials": [
     {
       title: "Data Structures Notes",
-      link: "path/to/notes",
+      link: "/notes/data-structures",
       description: "Comprehensive study materials",
     },
   ],
   "Code Repositories": [
     {
-      title: "GitHub Profile",
+      title: "Portfolio Projects",
       link: "https://github.com/TiagomvDuarte",
       description: "Collection of personal projects",
     },

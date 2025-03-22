@@ -23,7 +23,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="display.avif"
+          src="/display.avif"
           alt="Background"
           className="w-full h-full object-cover"
         />
@@ -59,7 +59,7 @@ export default function Hero() {
             className="flex justify-center items-center space-x-6"
           >
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:tiagomvduarte24@gmail.com"
               className="text-white/60 hover:text-primary transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
