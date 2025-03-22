@@ -58,9 +58,8 @@ app.use((req, res, next) => {
       etag: true
     }));
 
-    // Also serve static files from the potentially incorrect path
-    app.use("/TiagomvDuarte.github.io", express.static(path.join(__dirname, "public"), {
-      index: false,
+    // Also serve static files from /assets directly
+    app.use("/assets", express.static(path.join(__dirname, "public", "assets"), {
       maxAge: '1y',
       etag: true
     }));

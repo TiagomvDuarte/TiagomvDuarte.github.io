@@ -12,6 +12,11 @@ const base = window.location.hostname.includes('replit.app')
 // Set base path for assets
 document.documentElement.dataset.base = base;
 
+// Set base path for static assets
+const assetBase = document.createElement('base');
+assetBase.href = base;
+document.head.prepend(assetBase);
+
 const root = document.getElementById("root");
 if (!root) throw new Error("Root element not found");
 
