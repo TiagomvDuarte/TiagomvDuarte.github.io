@@ -115,9 +115,18 @@ export default function Navbar() {
                 }`}
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector(item.href)?.scrollIntoView({
-                    behavior: "smooth",
-                  });
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                    const headerOffset = 100;
+                    const elementRect = element.getBoundingClientRect();
+                    const absoluteElementTop = elementRect.top + window.pageYOffset;
+                    const offsetPosition = absoluteElementTop - headerOffset;
+                    
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth"
+                    });
+                  }
                 }}
               >
                 {item.label}
@@ -179,9 +188,18 @@ export default function Navbar() {
                     }`}
                     onClick={(e) => {
                       e.preventDefault();
-                      document.querySelector(item.href)?.scrollIntoView({
-                        behavior: "smooth",
-                      });
+                      const element = document.querySelector(item.href);
+                      if (element) {
+                        const headerOffset = 100;
+                        const elementRect = element.getBoundingClientRect();
+                        const absoluteElementTop = elementRect.top + window.pageYOffset;
+                        const offsetPosition = absoluteElementTop - headerOffset;
+                        
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth"
+                        });
+                      }
                       setIsOpen(false);
                     }}
                   >
