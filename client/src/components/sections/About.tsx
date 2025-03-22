@@ -95,20 +95,16 @@ const quote = {
 const About = () => {
   return (
     <>
+      {/* About Section */}
       <section id="about" className="py-16 bg-muted/10">
         <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
-              <User className="h-8 w-8 text-primary" />
-              ABOUT ME
-            </h2>
+          <motion.div className="grid gap-16">
+            <div>
+              <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+                <User className="h-8 w-8 text-primary" />
+                ABOUT ME
+              </h2>
 
-            <div className="grid gap-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -150,90 +146,93 @@ const About = () => {
                   </Card>
                 </motion.div>
               </div>
+            </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl mx-auto"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Card className="p-8 bg-card hover:bg-card transition-colors text-center">
-                  <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
-                  <p className="text-lg text-primary">- {quote.author}</p>
-                </Card>
-              </motion.div>
+            {/* Quote Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-3xl mx-auto"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Card className="p-8 bg-card hover:bg-card transition-colors text-center">
+                <p className="text-xl md:text-2xl italic text-muted-foreground mb-6 leading-relaxed">"{quote.text}"</p>
+                <p className="text-lg text-primary">- {quote.author}</p>
+              </Card>
+            </motion.div>
 
-              <div id="journey" className="scroll-mt-32">
-                <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
-                  <GraduationCap className="h-8 w-8 text-primary" />
-                  My Journey
-                </h3>
-                <Timeline items={timelineItems} />
+            {/* Journey Section */}
+            <div id="journey">
+              <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+                <GraduationCap className="h-8 w-8 text-primary" />
+                My Journey
+              </h2>
+              <Timeline items={timelineItems} />
+            </div>
+
+            {/* Tech Stack Section */}
+            <div id="tech-stack">
+              <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+                <Code2 className="h-8 w-8 text-primary" />
+                Tech Stack
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {Object.entries(techStack).map(([category, technologies]) => (
+                  <motion.div
+                    key={category}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <h4 className="font-medium text-lg flex items-center gap-2 mb-4">
+                      <Terminal className="h-4 w-4 text-primary" />
+                      {category}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 font-bold"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
+            </div>
 
-              <div id="tech-stack" className="scroll-mt-32">
-                <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
-                  <Code2 className="h-8 w-8 text-primary" />
-                  Tech Stack
-                </h3>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {Object.entries(techStack).map(([category, technologies]) => (
-                    <motion.div
-                      key={category}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      className="p-6 rounded-lg bg-card hover:bg-card transition-colors"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <h4 className="font-medium text-lg flex items-center gap-2 mb-4">
-                        <Terminal className="h-4 w-4 text-primary" />
-                        {category}
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 font-bold"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              <div id="activities" className="scroll-mt-32">
-                <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
-                  <FolderKanban className="h-8 w-8 text-primary" />
-                  Activities
-                </h3>
-                <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-                  {activities.map((activity) => (
-                    <motion.div
-                      key={activity.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      className="p-6 rounded-lg bg-card hover:bg-card transition-colors text-center"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <activity.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
-                      <h4 className="font-semibold mb-2">{activity.title}</h4>
-                      <p className="text-sm text-primary mb-1">{activity.date}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {activity.description}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
+            {/* Activities Section */}
+            <div id="activities">
+              <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+                <FolderKanban className="h-8 w-8 text-primary" />
+                Activities
+              </h2>
+              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {activities.map((activity) => (
+                  <motion.div
+                    key={activity.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="p-6 rounded-lg bg-card hover:bg-card transition-colors text-center"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <activity.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
+                    <h4 className="font-semibold mb-2">{activity.title}</h4>
+                    <p className="text-sm text-primary mb-1">{activity.date}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {activity.description}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </motion.div>
