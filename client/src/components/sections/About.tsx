@@ -257,7 +257,8 @@ const About = () => {
               </div>
             </div>
 
-            <div id="files">
+            {/* Files Section - Uncomment when ready */}
+            {/* <div id="files">
               <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
                 <FolderGit2 className="h-8 w-8 text-primary" />
                 Files
@@ -299,7 +300,7 @@ const About = () => {
                   </motion.div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>

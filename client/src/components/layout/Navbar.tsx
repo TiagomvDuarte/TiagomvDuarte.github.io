@@ -13,7 +13,8 @@ const navItems = [
   { href: "#journey", label: "My Journey" },
   { href: "#tech-stack", label: "Tech Stack" },
   { href: "#activities", label: "Activities" },
-  { href: "#files", label: "Files" },
+  // Commented Files section - uncomment when ready
+  // { href: "#files", label: "Files" },
 ];
 
 const socialLinks = [
