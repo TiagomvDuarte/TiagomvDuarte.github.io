@@ -11,16 +11,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Handle any requests to GitHub Pages paths
-app.use((req, res, next) => {
-  if (req.path.startsWith('/TiagomvDuarte.github.io')) {
-    // Extract the asset path after /TiagomvDuarte.github.io
-    const redirectPath = req.path.replace('/TiagomvDuarte.github.io', '');
-    return res.redirect(301, redirectPath);
-  }
-  next();
-});
-
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
