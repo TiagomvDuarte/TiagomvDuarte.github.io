@@ -4,11 +4,11 @@ import { FolderGit2, Link as LinkIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const resources = {
-  "Research Papers": [
+  "Portfolio Projects": [
     {
-      title: "Paper on AI Implementation",
-      link: "/papers/ai-implementation.pdf",
-      description: "Research on modern AI techniques",
+      title: "Personal Portfolio",
+      link: "https://replit.com/@TiagomiguelDuar/portfolio",
+      description: "My personal portfolio website built with React and Tailwind",
     },
   ],
   "Course Materials": [
@@ -18,11 +18,11 @@ const resources = {
       description: "Comprehensive study materials",
     },
   ],
-  "Code Repositories": [
+  "Research Papers": [
     {
-      title: "Portfolio Projects",
-      link: "https://github.com/TiagomvDuarte",
-      description: "Collection of personal projects",
+      title: "AI Implementation Paper",
+      link: "/papers/ai-implementation.pdf",
+      description: "Research on modern AI techniques",
     },
   ],
 };
@@ -39,7 +39,7 @@ export default function Projects() {
         >
           <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
             <FolderGit2 className="h-8 w-8 text-primary" />
-            Files
+            Projects
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

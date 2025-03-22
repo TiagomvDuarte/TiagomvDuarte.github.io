@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import AnimatedText from "@/components/shared/AnimatedText";
 import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiReplit } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
 
 export default function Hero() {
@@ -17,7 +17,6 @@ export default function Hero() {
 
   return (
     <section ref={ref} id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image */}
       <motion.div
         style={{ y, opacity }}
         className="absolute inset-0 z-0"
@@ -51,7 +50,6 @@ export default function Hero() {
             I'm a Computer Science student and a tech enthusiast
           </motion.p>
 
-          {/* Contact Links */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -68,26 +66,16 @@ export default function Hero() {
               <span className="sr-only">Email</span>
             </a>
             <a
-              href="https://github.com/TiagomvDuarte"
-              className="text-white/60 hover:text-white transition-colors duration-300"
+              href="https://replit.com/@TiagomiguelDuar"
+              className="text-white/60 hover:text-[#F26207] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SiGithub className="w-6 h-6" />
-              <span className="sr-only">GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tiago-duarte-628278263/"
-              className="text-white/60 hover:text-[#0077b5] transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SiLinkedin className="w-6 h-6" />
-              <span className="sr-only">LinkedIn</span>
+              <SiReplit className="w-6 h-6" />
+              <span className="sr-only">Replit</span>
             </a>
           </motion.div>
 
-          {/* Animated Arrow */}
           <motion.div
             className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer"
             animate={{ y: [0, 10, 0] }}

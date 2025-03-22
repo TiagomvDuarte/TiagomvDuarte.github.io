@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiReplit } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
 import ThemeToggle from "@/components/shared/ThemeToggle";
 
@@ -13,8 +13,6 @@ const navItems = [
   { href: "#journey", label: "My Journey" },
   { href: "#tech-stack", label: "Tech Stack" },
   { href: "#activities", label: "Activities" },
-  // Commented Files section - uncomment when ready
-  // { href: "#files", label: "Files" },
 ];
 
 const socialLinks = [
@@ -25,16 +23,10 @@ const socialLinks = [
     color: "hover:text-primary",
   },
   {
-    name: "GitHub",
-    url: "https://github.com/TiagomvDuarte",
-    icon: SiGithub,
-    color: "hover:text-[#333] dark:hover:text-[#fff]",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/tiago-duarte-628278263/",
-    icon: SiLinkedin,
-    color: "hover:text-[#0077b5]",
+    name: "Replit",
+    url: "https://replit.com/@TiagomiguelDuar",
+    icon: SiReplit,
+    color: "hover:text-[#F26207]",
   },
 ];
 
@@ -56,7 +48,6 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className="fixed w-full z-50"
     >
-      {/* Background overlay with animation */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: scrolled || isOpen ? 1 : 0 }}
@@ -66,7 +57,6 @@ export default function Navbar() {
 
       <nav className="container mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/">
             <a className={`transition-opacity ${scrolled || isOpen ? 'opacity-100' : 'opacity-90'}`}>
               <img 
@@ -81,7 +71,6 @@ export default function Navbar() {
             </a>
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -103,7 +92,6 @@ export default function Navbar() {
               </a>
             ))}
 
-            {/* Theme Toggle + Social Links */}
             <div className="flex items-center space-x-4">
               <ThemeToggle isTransparent={!scrolled && !isOpen} />
               {socialLinks.map((link) => (
@@ -127,7 +115,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Right Side Controls */}
           <div className="lg:hidden flex items-center space-x-4">
             <ThemeToggle isTransparent={!scrolled && !isOpen} />
             <Button
@@ -141,7 +128,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -173,7 +159,6 @@ export default function Navbar() {
                   </a>
                 ))}
 
-                {/* Mobile Social Links */}
                 <div className="flex items-center space-x-4 pt-4">
                   {socialLinks.map((link) => (
                     <motion.a

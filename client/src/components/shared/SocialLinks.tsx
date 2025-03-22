@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiReplit } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
 
 const socialLinks = [
@@ -10,16 +10,10 @@ const socialLinks = [
     color: "hover:text-primary",
   },
   {
-    name: "GitHub",
-    url: "https://github.com/TiagomvDuarte",
-    icon: SiGithub,
-    color: "hover:text-[#333]",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/tiago-duarte-628278263/",
-    icon: SiLinkedin,
-    color: "hover:text-[#0077b5]",
+    name: "Replit",
+    url: "https://replit.com/@TiagomiguelDuar",
+    icon: SiReplit,
+    color: "hover:text-[#F26207]",
   },
 ];
 
