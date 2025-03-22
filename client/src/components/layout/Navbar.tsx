@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiReplit } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
+import { FaLinkedin } from "react-icons/fa"; // Added import for FaLinkedin
 import ThemeToggle from "@/components/shared/ThemeToggle";
 
 const navItems = [
@@ -17,22 +18,22 @@ const navItems = [
 
 const socialLinks = [
   {
-    name: "GitHub",
-    url: "https://github.com/TiagomvDuarte",
-    icon: FaGithub,
-    color: "hover:text-[#2ea44f]",
+    name: "Email",
+    url: "mailto:tiagomvduarte24@gmail.com",
+    icon: HiMail,
+    color: "hover:text-primary",
+  },
+  {
+    name: "Replit",
+    url: "https://replit.com/@TiagomiguelDuar",
+    icon: SiReplit,
+    color: "hover:text-[#F26207]",
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/tiagomvduarte/",
     icon: FaLinkedin,
     color: "hover:text-[#0077B5]",
-  },
-  {
-    name: "Email",
-    url: "mailto:tiagomvduarte24@gmail.com",
-    icon: HiMail,
-    color: "hover:text-primary",
   },
 ];
 
@@ -65,12 +66,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/">
             <a className={`transition-opacity ${scrolled || isOpen ? 'opacity-100' : 'opacity-90'}`}>
-              <img 
-                src="/1-removebg-preview.png"  
+              <img
+                src="/1-removebg-preview.png"
                 alt="Tiago Duarte"
                 className={`h-8 transition-all duration-300 ${
-                  scrolled || isOpen 
-                    ? 'dark:brightness-[1000] brightness-0' 
+                  scrolled || isOpen
+                    ? 'dark:brightness-[1000] brightness-0'
                     : 'brightness-[1000] dark:brightness-[1000]'
                 }`}
               />
