@@ -11,6 +11,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Handle any requests to GitHub Pages paths
+app.use((req, res, next) => {
+  if (req.path.startsWith('/TiagomvDuarte.github.io')) {
+    // Extract the asset path after /TiagomvDuarte.github.io
+    const redirectPath = req.path.replace('/TiagomvDuarte.github.io', '');
+    return res.redirect(301, redirectPath);
+  }
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -47,7 +57,6 @@ app.use((req, res, next) => {
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
-
     res.status(status).json({ message });
     throw err;
   });
@@ -55,11 +64,17 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    // Serve static files
+    // Serve static files with proper caching
     app.use(express.static(join(__dirname, "public"), {
       index: false,
       maxAge: '1y',
-      etag: true
+      etag: true,
+      setHeaders: (res, path) => {
+        // Ensure CSS and JS files are properly served
+        if (path.endsWith('.css') || path.endsWith('.js')) {
+          res.setHeader('Content-Type', path.endsWith('.css') ? 'text/css' : 'application/javascript');
+        }
+      }
     }));
 
     // Serve index.html for all non-api routes
