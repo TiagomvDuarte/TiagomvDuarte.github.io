@@ -51,26 +51,20 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    // Serve static files - Important to place this before the catch-all route
-    app.use("/", express.static(path.join(__dirname, "public"), {
-      index: false, // Don't serve index.html for every route
-      maxAge: '1y', // Add cache headers for static assets
-      etag: true
-    }));
-
-    // Also serve static files from /assets directly
-    app.use("/assets", express.static(path.join(__dirname, "public", "assets"), {
+    // Serve static files
+    app.use(express.static(path.join(__dirname, "public"), {
+      index: false,
       maxAge: '1y',
       etag: true
     }));
 
-    // Serve assets for GitHub Pages path as well
-    app.use("/TiagomvDuarte.github.io/assets", express.static(path.join(__dirname, "public", "assets"), {
+    // Explicitly serve assets from both paths
+    app.use(["/assets", "/TiagomvDuarte.github.io/assets"], express.static(path.join(__dirname, "public", "assets"), {
       maxAge: '1y',
       etag: true
     }));
 
-    // Handle client-side routing - always serve index.html for non-API routes
+    // Handle all other routes by serving index.html
     app.get("*", (req, res) => {
       if (!req.path.startsWith("/api")) {
         res.sendFile(path.join(__dirname, "public", "index.html"));
