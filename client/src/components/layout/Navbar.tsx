@@ -13,6 +13,8 @@ const navItems = [
   { href: "#journey", label: "My Journey" },
   { href: "#tech-stack", label: "Tech Stack" },
   { href: "#activities", label: "Activities" },
+  { href: "#projects", label: "Projects" },
+  { href: "#resources", label: "Resources" },
 ];
 
 const socialLinks = [

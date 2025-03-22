@@ -114,16 +114,23 @@ const About = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className="relative aspect-square max-w-md mx-auto"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl -rotate-6" />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-6" />
+                {/* Gradient borders that scale up */}
+                <motion.div
+                  className="absolute inset-0"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl -rotate-6" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-6" />
+                </motion.div>
+
+                {/* Card and image that don't scale */}
                 <Card className="relative overflow-hidden rounded-2xl border-2 border-primary/20">
                   <img
                     src="profile.jpg"
                     alt="Tiago Duarte"
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-cover"
                   />
                 </Card>
               </motion.div>
