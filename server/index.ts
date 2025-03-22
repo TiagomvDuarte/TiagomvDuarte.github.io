@@ -48,22 +48,23 @@ app.use((req, res, next) => {
     throw err;
   });
 
+  // Serve static files unconditionally
+  app.use(express.static(path.join(__dirname, "public"), {
+    index: false,
+    maxAge: '1y',
+    etag: true
+  }));
+
+  // Handle all other routes by serving index.html
+  app.get("*", (req, res) => {
+    if (!req.path.startsWith("/api")) {
+      res.sendFile(path.join(__dirname, "public", "index.html"));
+    }
+  });
+
+
   if (app.get("env") === "development") {
     await setupVite(app, server);
-  } else {
-    // Serve static files
-    app.use(express.static(path.join(__dirname, "public"), {
-      index: false,
-      maxAge: '1y',
-      etag: true
-    }));
-
-    // Handle all other routes by serving index.html
-    app.get("*", (req, res) => {
-      if (!req.path.startsWith("/api")) {
-        res.sendFile(path.join(__dirname, "public", "index.html"));
-      }
-    });
   }
 
   const port = 5000;
