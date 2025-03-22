@@ -58,6 +58,24 @@ export default function Hero() {
             className="flex justify-center items-center space-x-6"
           >
             <a
+              href="https://github.com/TiagomvDuarte"
+              className="text-white/60 hover:text-[#2ea44f] transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="w-6 h-6" />
+              <span className="sr-only">GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/tiagomvduarte/"
+              className="text-white/60 hover:text-[#0077B5] transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="w-6 h-6" />
+              <span className="sr-only">LinkedIn</span>
+            </a>
+            <a
               href="mailto:tiagomvduarte24@gmail.com"
               className="text-white/60 hover:text-primary transition-colors duration-300"
               target="_blank"
@@ -65,15 +83,6 @@ export default function Hero() {
             >
               <HiMail className="w-6 h-6" />
               <span className="sr-only">Email</span>
-            </a>
-            <a
-              href="https://replit.com/@TiagomiguelDuar"
-              className="text-white/60 hover:text-[#F26207] transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SiReplit className="w-6 h-6" />
-              <span className="sr-only">Replit</span>
             </a>
           </motion.div>
 

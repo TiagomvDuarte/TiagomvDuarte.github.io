@@ -17,16 +17,22 @@ const navItems = [
 
 const socialLinks = [
   {
+    name: "GitHub",
+    url: "https://github.com/TiagomvDuarte",
+    icon: FaGithub,
+    color: "hover:text-[#2ea44f]",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/tiagomvduarte/",
+    icon: FaLinkedin,
+    color: "hover:text-[#0077B5]",
+  },
+  {
     name: "Email",
     url: "mailto:tiagomvduarte24@gmail.com",
     icon: HiMail,
     color: "hover:text-primary",
-  },
-  {
-    name: "Replit",
-    url: "https://replit.com/@TiagomiguelDuar",
-    icon: SiReplit,
-    color: "hover:text-[#F26207]",
   },
 ];
 
