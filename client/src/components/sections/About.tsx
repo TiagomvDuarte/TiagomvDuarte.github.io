@@ -121,7 +121,7 @@ const About = () => {
                   <img
                     src="profile.jpg"
                     alt="Tiago Duarte"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </Card>
               </motion.div>
