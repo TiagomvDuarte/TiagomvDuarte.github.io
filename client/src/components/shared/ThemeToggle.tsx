@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ className = "", isTransparent = false }) {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="w-10 h-10 rounded-full"
+      className={`w-10 h-10 rounded-full ${isTransparent ? 'text-white' : ''} ${className}`}
     >
       {theme === "light" ? (
         <Moon className="h-5 w-5 transition-all" />

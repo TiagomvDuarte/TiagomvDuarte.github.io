@@ -70,7 +70,11 @@ export default function Navbar() {
               <img 
                 src="1-removebg-preview.png" 
                 alt="Tiago Duarte"
-                className="h-8 transition-all duration-300 brightness-[1000] dark:brightness-[1000]"
+                className={`h-8 transition-all duration-300 ${
+                  scrolled || isOpen 
+                    ? 'dark:brightness-[1000] brightness-0' 
+                    : 'brightness-[1000] dark:brightness-[1000]'
+                }`}
               />
             </a>
           </Link>
@@ -81,7 +85,11 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors"
+                className={`transition-colors ${
+                  scrolled || isOpen
+                    ? 'text-foreground hover:text-primary'
+                    : 'text-white hover:text-white/80'
+                }`}
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
@@ -95,14 +103,18 @@ export default function Navbar() {
 
             {/* Theme Toggle + Social Links */}
             <div className="flex items-center space-x-4">
-              <ThemeToggle />
+              <ThemeToggle isTransparent={!scrolled && !isOpen} />
               {socialLinks.map((link) => (
                 <motion.a
                   key={link.name}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-muted-foreground ${link.color} transition-all duration-300`}
+                  className={`${
+                    scrolled || isOpen
+                      ? 'text-muted-foreground'
+                      : 'text-white/60'
+                  } ${link.color} transition-all duration-300`}
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -115,11 +127,12 @@ export default function Navbar() {
 
           {/* Mobile Right Side Controls */}
           <div className="lg:hidden flex items-center space-x-4">
-            <ThemeToggle />
+            <ThemeToggle isTransparent={!scrolled && !isOpen} />
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
+              className={!scrolled && !isOpen ? 'text-white' : ''}
             >
               {isOpen ? <X /> : <Menu />}
             </Button>
@@ -141,7 +154,11 @@ export default function Navbar() {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="text-foreground hover:text-primary transition-colors"
+                    className={`transition-colors ${
+                      scrolled || isOpen
+                        ? 'text-foreground hover:text-primary'
+                        : 'text-white hover:text-white/80'
+                    }`}
                     onClick={(e) => {
                       e.preventDefault();
                       document.querySelector(item.href)?.scrollIntoView({
@@ -162,7 +179,11 @@ export default function Navbar() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`text-muted-foreground ${link.color} transition-all duration-300`}
+                      className={`${
+                        scrolled || isOpen
+                          ? 'text-muted-foreground'
+                          : 'text-white/60'
+                      } ${link.color} transition-all duration-300`}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.95 }}
                     >

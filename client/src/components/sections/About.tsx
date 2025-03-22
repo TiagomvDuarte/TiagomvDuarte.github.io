@@ -6,6 +6,7 @@ import {
   Terminal,
   Droplet,
   Monitor,
+  FolderKanban,
   User,
 } from "lucide-react";
 import { PiGuitarFill } from "react-icons/pi";
@@ -72,7 +73,7 @@ const timelineItems = [
   {
     date: "September 2022 - Present",
     title: "BSc in Computer Science and Engineering - NOVA FCT",
-    description: "Average: 16.7"
+    description: "Average: 17"
   },
   {
     date: "July 2023",
@@ -82,7 +83,7 @@ const timelineItems = [
   {
     date: "September 2019 - June 2022",
     title: "High School in Science & Technology Course",
-    description: "Average: 17.7"
+    description: "Average: 18"
   },
 ];
 
@@ -207,7 +208,7 @@ const About = () => {
 
             <div id="activities" className="scroll-mt-32">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-                <User className="h-6 w-6 text-primary" />
+                <FolderKanban className="h-6 w-6 text-primary" />
                 Activities
               </h3>
               <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
