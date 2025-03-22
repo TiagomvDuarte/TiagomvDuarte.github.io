@@ -3,6 +3,7 @@ import AnimatedText from "@/components/shared/AnimatedText";
 import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
 import { SiReplit } from "react-icons/si";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 
 export default function Hero() {
