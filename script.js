@@ -1,26 +1,3 @@
-// Theme toggle
-const themeToggle = document.getElementById('themeToggle');
-const html = document.documentElement;
-const navLogo = document.getElementById('navLogo');
-const footerLogo = document.getElementById('footerLogo');
-
-function setTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    const logoSrc = theme === 'dark' ? 'assets/logo_white.png' : 'assets/logo_blue.png';
-    navLogo.src = logoSrc;
-    footerLogo.src = logoSrc;
-}
-
-// Load saved theme or default to dark
-const savedTheme = localStorage.getItem('theme') || 'dark';
-setTheme(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    setTheme(current === 'dark' ? 'light' : 'dark');
-});
-
 // ---- DATA GRID CANVAS ----
 (function () {
     const canvas = document.getElementById('heroCanvas');
@@ -71,10 +48,10 @@ themeToggle.addEventListener('click', () => {
     });
 
     function getColor() {
-        const isDark = html.getAttribute('data-theme') === 'dark';
+        // Sempre dark mode
         return {
-            dot: isDark ? 'rgba(74,158,237,' : 'rgba(27,58,92,',
-            line: isDark ? 'rgba(74,158,237,' : 'rgba(27,58,92,',
+            dot: 'rgba(74,158,237,',
+            line: 'rgba(74,158,237,',
         };
     }
 
