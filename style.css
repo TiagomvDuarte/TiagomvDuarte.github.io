@@ -689,7 +689,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    max-width: 800px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
