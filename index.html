@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago Duarte | Portofolio</title>
+    <link rel="icon" type="image/png" href="assets/logo_blue.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/logo_white.png" alt="Tiago Duarte Logo" class="nav-logo-img" id="navLogo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#timeline">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Tiago Duarte</h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title">Data Science & Artificial Intelligence</span>
+                </div>
+                <p class="hero-description">
+                    Passionate about transforming data into actionable insights and building
+                    intelligent systems that solve real-world problems.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-frame">
+                    <img src="assets/photo.jpg" alt="Tiago Duarte">
+                </div>
+                <div class="hero-image-decoration"></div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Computer Science graduate from NOVA School of Science and Technology, currently pursuing a Master's in Data Science and Advanced Analytics at NOVA IMS while working as a Generative AI Developer at Unipartner.
+                    </p>
+                    <p>
+                        My Master's program (Data Science specialization) deepens my technical expertise across Statistical Modeling, Machine & Deep Learning, Big Data and Computational Intelligence.
+                    </p>
+                    <p>
+                        At Unipartner, I implement Microsoft-based AI solutions, building on experience gained during my curricular internship exploring the potential of Agentic AI systems. I work on deploying Generative AI applications that automate workflows, enhance decision-making, and solve specific business problems across different sectors.
+                    </p>
+                    <p>
+                        My previous bachelor gave me strong foundationis in Software Engineering, Algorithms & Data Structures, Distributed Systems, Computer Networks & Architectures, Theory of Computation, Computational Logic and AI Fundamentals
+                    </p>
+                    <p>
+                        This combination of academic training with hands-on professional experience gives me both the theoretical foundation and practical perspective needed to build robust, scalable AI solutions.
+                    </p>
+                    <p>
+                        Open to connecting with people working at the intersection of AI research and real-world implementation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">September 2025 - Present</span>
+                        <h3>MSc in Data Science & Advanced Analytics: Specialization in Data Science</h3>
+                        <p class="timeline-place">NOVA Information Management School (IMS)</p>
+                        <p>Advanced studies in machine learning algorithms, deep learning architectures, big data processing, statistical modeling, and AI-driven optimization techniques:</p>
+                        <p><b>Data Mining:</b> </p>
+                        <p><b>Machine Learning:</b> </p>
+                        <p><b>Statistics for Data Science:</b> </p>
+                        <p><b>Programming for Data Science: 19 </b></p>
+                        <p><b>Storing and Retrieving Data: 19</b></p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">September 2025 - Present</span>
+                        <h3>Gen AI Developer</h3>
+                        <p class="timeline-place">Unipartner</p>
+                        <p>Building production-ready generative AI solutions including chatbots, intelligent search systems, and voice agents on Microsoft Azure platform. <br>Also doing research on innovation and emerging solutions<br><br>
+                        <b>Core Technologies:</b> Microsoft AI Foundry, Azure AI Search, Microsoft Fabric, Microsoft Azure</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">March 2025 - July 2025</span>
+                        <h3>Curricular Internship: Agentic AI</h3>
+                        <p class="timeline-place">Unipartner</p>
+                        <p>Investigated Agentic AI potencial and architectures. Explored Agent AI frameworks including Microsoft AutoGen and Semantic Kernel. Developed and deployed proof-of-concepts for enterprise clients in the Portuguese market.<br><br>
+                        <b>Core Technologies:</b> Microsoft AutoGen, Semantic Kernel, Agentic AI architectures, MCP</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">September 2022 - July 2025</span>
+                        <h3>BSc in Computer Science & Engineering</h3>
+                        <p class="timeline-place">NOVA School of Science & Tecnologies (SST)</p>
+                        <p>Comprehensive computer science education covering programming, algorithms & data structures, databses, distributed systems, computer networks & architectures, logic systems, AI, and mathematical foundations</p>
+                        <p><b>Artificial Intelligence: 18</b> </p>
+                        <p><b>Software Engineering: 18 </b></p>
+                        <p><b>Discrete Mathematics: 18</b></p>
+                        <p><b>Probability & Statistics: 18</b></p>
+                        <p><b>Databases: 17</b> </p>
+                        <p><b>Calculus I: 17</b></p>
+                        <p><b>Computacional Logic: 17</b> </p>
+                        <p><b>Theory of Computation: 17</b></p>
+                        <p><b>Operating Systems: 17</b></p>
+                        <p><b>Computer Networks: 17</b></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Car Price Prediction Model</h3>
+                        <p>Supervised learning regression model predicting used car prices before workshop inspection, using various models and advanced feature engineering with comprehensive model comparison and hyperparameter optimization.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Seaborn</span>
+                            <span>Random Forest</span>
+                            <span>Gradient Boosting</span>
+                            <span>AdaBoost</span>
+                            <span>Neural Networks</span>
+                            <span>Support Vector Regressor</span>
+                            <span>K-Nearest Neighbour</span>
+                            <span>Decision Trees</span>
+                            <span>Linear Regression</span>
+                            <span>Lasso</span>
+                            <span>RFE</span>
+                            <span>Feature Engineering</span>
+                            <span>Random Search</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <a href="https://github.com/TiagomvDuarte/Car-Price-Prediction-Model.git" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Airline Customer Segmentation Analysis</h3>
+                        <p>Unsupervised Learning model identifying distinct passenger profiles through clustering algorithms and dimensionality reduction techniques, with extensive feature engineering and data preprocessing.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>K-Means</span>
+                            <span>Hierarchical Clustering</span>
+                            <span>SOM</span>
+                            <span>DBSCAN</span>
+                            <span>Mean-Shift</span>
+                            <span>GMM</span>
+                            <span>Fuzzy C-Means</span>
+                            <span>PCA</span>
+                            <span>t-SNE</span>
+                            <span>UMAP</span>
+                            <span>Feature Engineering</span>
+                            <span>Seaborn</span>
+                            <span>Matplotlib</span>
+                            <span>Financial Impact Modeling</span>
+                        </div>
+                        <a href="https://github.com/TiagomvDuarte/Airline-Customers-Segmentation-Analysis.git" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-items">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Java</span>
+                        <span>C</span>
+                        <span>OCaml</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-flask"></i>ML/DS</h3>
+                    <div class="skill-items">
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Supervised Machine Learning</h3>
+                    <div class="skill-items">
+                        <span>KNN</span>
+                        <span>Naive Bayes</span>
+                        <span>Decision Trees</span>
+                        <span>Random Forest</span>
+                        <span>Linear/Logistic Regression</span>
+                        <span>Neural Networks</span>
+                        <span>Support Vector Machines</span>
+                        <span>Gradient Boosting</span>
+                        <span>Ada Boost</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-sitemap"></i> Unsupervised Machine Learning</h3>
+                    <div class="skill-items">
+                        <span>K-Means Clustering</span>
+                        <span>Hierarchical Clustering</span>
+                        <span>A Priori Grouping</span>
+                        <span>DBSCAN</span>
+                        <span>PCA</span>
+                        <span>Association Rules</span>
+                        <span>Mean-Shift Clustering</span>
+                        <span>Gaussian Mixture Models</span>
+                        <span>Self-Organizing Maps</span>
+                        <span>Fuzzy C-Means</span>
+                        <span>TSNE</span>
+                        <span>UMAP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> AI Fundamentals</h3>
+                    <div class="skill-items">
+                        <span>Search Algorithms</span>
+                        <span>Constraint Satisfaction Problems</span>
+                        <span>Logic Systems and PROLOG</span>
+                        <span>Knowledge Representation</span>
+                        <span>Planning (GRAPHPLAN)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-microchip"></i> Computer Science</h3>
+                    <div class="skill-items">
+                        <span>Distributed Systems</span>
+                        <span>Data Structures & Algorithms</span>
+                        <span>Computer Networks & Architectures</span>
+                        <span>Software Engineering</span>
+                        <span>Computational Logic</span>
+                        <span>Theory of Computation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-wave-square"></i>Statistical Inference</h3>
+                    <div class="skill-items">
+                        <span>Hypothesis Testing & Confidence Intervals</span>
+                        <span>Probabilities</span>
+                        <span>Regression Analysis</span>
+                        <span>Statistical Inference</span>
+                        <span>Causal Inference</span>
+                        <span>R</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fab fa-microsoft"></i> Microsoft Tools</h3>
+                    <div class="skill-items">
+                        <span>Azure AI Search</span>
+                        <span>Microsoft AI Foundry</span>
+                        <span>Microsoft Azure</span>
+                        <span>Microsoft Fabric</span>
+                        <span>Voice Live API</span>
+                        <span>Microsoft Agent Framework</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-items">
+                        <span>SQL</span>
+                        <span>MySQL</span>
+                        <span>SQLite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-subtitle">Feel free to reach out for collaborations, opportunities, or just a chat about data science.</p>
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/" class="contact-card" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/TiagomvDuarte" class="contact-card" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:tiagomvduarte24@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img src="assets/logo_white.png" alt="Tiago Duarte" class="footer-logo" id="footerLogo">
+            <p>&copy; 2025 Tiago Duarte. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
